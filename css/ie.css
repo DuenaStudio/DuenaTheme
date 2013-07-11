@@ -1,0 +1,42 @@
+
+
+.format-image .entry-content .size-full {
+	max-width: 604px;
+	margin: 0;
+}
+
+.gallery-columns-1 .gallery-item {
+	max-width: 610px;
+}
+.gallery-columns-2 .gallery-item {
+	max-width: 300px
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 200px;
+}
+
+.gallery img {
+	width: auto;
+}
+
+
+/* Internet Explorer 8 */
+.ie8 .site {
+	border: 0;
+}
+
+.ie8 img.size-full,
+.ie8 img.size-large {
+	height: auto;
+	width: auto;
+}
+
+
+/* Internet Explorer 7 */
+.ie7 audio,
+.ie7 canvas,
+.ie7 video {
+	display: inline;
+	zoom: 1;
+}

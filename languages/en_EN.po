@@ -1,0 +1,920 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Duena\n"
+"POT-Creation-Date: 2013-05-23 17:14+0200\n"
+"PO-Revision-Date: 2013-05-23 17:14+0200\n"
+"Last-Translator: Duena <Duena@demomail.org>\n"
+"Language-Team: Duena <duena@demomail.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.5\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;esc_attr_e;_e\n"
+"X-Poedit-Basepath: ./\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../404.php:15
+msgid "Sorry!"
+msgstr ""
+
+#: ../404.php:16
+msgid "Page Not Found"
+msgstr ""
+
+#: ../404.php:18
+msgid ""
+"The page you are looking for might have been removed, had its name changed, "
+"or is temporarily unavailable."
+msgstr ""
+
+#: ../404.php:19
+msgid ""
+"Please try using our search box below to look for information on the "
+"internet."
+msgstr ""
+
+#: ../archive.php:21
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: ../archive.php:24
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: ../archive.php:31 ../author.php:50
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: ../archive.php:39
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: ../archive.php:42
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: ../archive.php:45
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: ../archive.php:48
+msgid "Asides"
+msgstr ""
+
+#: ../archive.php:51
+msgid "Images"
+msgstr ""
+
+#: ../archive.php:54
+msgid "Videos"
+msgstr ""
+
+#: ../archive.php:57
+msgid "Quotes"
+msgstr ""
+
+#: ../archive.php:60
+msgid "Links"
+msgstr ""
+
+#: ../archive.php:63 ../sidebar.php:17
+msgid "Archives"
+msgstr ""
+
+#: ../author.php:24
+#, php-format
+msgid "About: %s"
+msgstr ""
+
+#: ../author.php:72 ../index.php:34 ../no-results.php:28
+#: ../post-formats/index.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../comments.php:39 ../comments.php:55
+msgid "Comment navigation"
+msgstr ""
+
+#: ../comments.php:40 ../comments.php:56
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: ../comments.php:41 ../comments.php:57
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: ../comments.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:72
+#, php-format
+msgid ""
+"You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags "
+"and attributes: %s"
+msgstr ""
+
+#: ../footer.php:23
+msgid "A Semantic Personal Publishing Platform"
+msgstr ""
+
+#: ../footer.php:23
+#, php-format
+msgid "Proudly powered by %s"
+msgstr ""
+
+#: ../functions.php:111
+msgid "Primary Menu"
+msgstr ""
+
+#: ../functions.php:112
+msgid "Footer Menu"
+msgstr ""
+
+#: ../functions.php:143
+msgid "Sidebar"
+msgstr ""
+
+#: ../functions.php:503
+#, php-format
+msgid "<span class=\"author fn\">%1$s</span>"
+msgstr ""
+
+#: ../functions.php:506
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../functions.php:516
+#, php-format
+msgid "%1$s"
+msgstr ""
+
+#: ../image.php:25
+#, php-format
+msgid ""
+"Published <span class=\"entry-date\"><time class=\"entry-date\" datetime="
+"\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size "
+"image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" "
+"rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: ../image.php:36 ../image.php:112
+msgid "Edit"
+msgstr ""
+
+#: ../image.php:40
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr ""
+
+#: ../image.php:43
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: ../image.php:98 ../page-templates/fullwidth.php:18
+#: ../post-formats/aside.php:8 ../post-formats/audio.php:28
+#: ../post-formats/chat.php:23 ../post-formats/gallery.php:59
+#: ../post-formats/image.php:37 ../post-formats/link.php:36
+#: ../post-formats/quote.php:16 ../post-formats/standard.php:50
+#: ../post-formats/status.php:8 ../post-formats/video.php:31
+msgid "Pages:"
+msgstr ""
+
+#: ../image.php:104
+#, php-format
+msgid ""
+"<a class=\"comment-link\" href=\"#respond\" title=\"Post a comment\">Post a "
+"comment</a> or leave a trackback: <a class=\"trackback-link\" href=\"%s\" "
+"title=\"Trackback URL for your post\" rel=\"trackback\">Trackback URL</a>."
+msgstr ""
+
+#: ../image.php:106
+#, php-format
+msgid ""
+"Comments are closed, but you can leave a trackback: <a class=\"trackback-link"
+"\" href=\"%s\" title=\"Trackback URL for your post\" rel=\"trackback"
+"\">Trackback URL</a>."
+msgstr ""
+
+#: ../image.php:108
+msgid ""
+"Trackbacks are closed, but you can <a class=\"comment-link\" href=\"#respond"
+"\" title=\"Post a comment\">post a comment</a>."
+msgstr ""
+
+#: ../image.php:110
+msgid "Both comments and trackbacks are currently closed."
+msgstr ""
+
+#: ../no-results.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: ../no-results.php:19
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../no-results.php:23
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+
+#: ../options.php:33
+msgid "Image Logo"
+msgstr ""
+
+#: ../options.php:34
+msgid "Text Logo"
+msgstr ""
+
+#: ../options.php:39 ../options.php:45 ../options.php:70 ../options.php:94
+#: ../options.php:100 ../options.php:106 ../options.php:112 ../options.php:135
+#: ../options.php:142 ../options.php:148 ../options.php:153
+msgid "Yes"
+msgstr ""
+
+#: ../options.php:40 ../options.php:46 ../options.php:71 ../options.php:95
+#: ../options.php:101 ../options.php:107 ../options.php:113 ../options.php:135
+#: ../options.php:143 ../options.php:149 ../options.php:153
+msgid "No"
+msgstr ""
+
+#: ../options.php:51
+msgid "Enable fade-in animation"
+msgstr ""
+
+#: ../options.php:52
+msgid "Disable fade-in animation"
+msgstr ""
+
+#: ../options.php:57
+msgid "Enable slide-down animation"
+msgstr ""
+
+#: ../options.php:58
+msgid "Disable slide-down animation"
+msgstr ""
+
+#: ../options.php:63
+msgid "Slow"
+msgstr ""
+
+#: ../options.php:64 ../options/options-sanitize.php:348
+msgid "Normal"
+msgstr ""
+
+#: ../options.php:65
+msgid "Fast"
+msgstr ""
+
+#: ../options.php:76 ../options.php:122 ../options.php:125 ../options.php:128
+#: ../options.php:131
+msgid "Show"
+msgstr ""
+
+#: ../options.php:77 ../options.php:122 ../options.php:125 ../options.php:128
+#: ../options.php:131
+msgid "Hide"
+msgstr ""
+
+#: ../options.php:82
+msgid "Fade"
+msgstr ""
+
+#: ../options.php:83
+msgid "Slide"
+msgstr ""
+
+#: ../options.php:88
+msgid "Horizontal"
+msgstr ""
+
+#: ../options.php:89
+msgid "Vertical"
+msgstr ""
+
+#: ../options.php:138
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../options.php:138
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../options.php:179 ../options.php:605
+msgid "General"
+msgstr ""
+
+#: ../options.php:182
+msgid "Display search box?"
+msgstr ""
+
+#: ../options.php:183
+msgid "Display search box in the header?"
+msgstr ""
+
+#: ../options.php:189 ../options.php:190
+msgid "Display breadcrumbs?"
+msgstr ""
+
+#: ../options.php:196
+msgid "Display Author Bio in sidebar"
+msgstr ""
+
+#: ../options.php:197
+msgid "Show/hide author bio in sidebar"
+msgstr ""
+
+#: ../options.php:203
+msgid "Author Bio Title"
+msgstr ""
+
+#: ../options.php:204
+msgid "Enter Author Bio Title"
+msgstr ""
+
+#: ../options.php:208
+msgid "Welcome to my site"
+msgstr ""
+
+#: ../options.php:210
+msgid "Author Bio image"
+msgstr ""
+
+#: ../options.php:211
+msgid "Upload Author Bio image"
+msgstr ""
+
+#: ../options.php:216
+msgid "Author Bio Message"
+msgstr ""
+
+#: ../options.php:217
+msgid "Enter Author Bio Message (HTML tags allowed)"
+msgstr ""
+
+#: ../options.php:221
+msgid ""
+"Hello, and welcome to my site! I hope you like the place and decide to stay."
+msgstr ""
+
+#: ../options.php:223
+msgid "Author Twitter URL"
+msgstr ""
+
+#: ../options.php:224
+msgid "Enter Author Twitter URL"
+msgstr ""
+
+#: ../options.php:230
+msgid "Author Facebook URL"
+msgstr ""
+
+#: ../options.php:231
+msgid "Enter Author Facebook URL"
+msgstr ""
+
+#: ../options.php:237
+msgid "Author Google+ URL"
+msgstr ""
+
+#: ../options.php:238
+msgid "Enter Author Google+ URL"
+msgstr ""
+
+#: ../options.php:244
+msgid "Author LinkedIn URL"
+msgstr ""
+
+#: ../options.php:245
+msgid "Enter Author LinkedIn URL"
+msgstr ""
+
+#: ../options.php:251
+msgid "Author RSS URL"
+msgstr ""
+
+#: ../options.php:252
+msgid "Enter Author RSS URL"
+msgstr ""
+
+#: ../options.php:261 ../options.php:760
+msgid "Logo & Favicon"
+msgstr ""
+
+#: ../options.php:264
+msgid "What kind of logo?"
+msgstr ""
+
+#: ../options.php:265
+msgid ""
+"Select whether you want your main logo to be an image or text. If you select "
+"'image' you can put in the image url in the next option, and if you select "
+"'text' your Site Title will show instead."
+msgstr ""
+
+#: ../options.php:271
+msgid "Logo Image Path"
+msgstr ""
+
+#: ../options.php:272
+msgid "Upload logo image"
+msgstr ""
+
+#: ../options.php:276
+msgid "Favicon"
+msgstr ""
+
+#: ../options.php:277
+msgid "Click Upload or Enter the direct path to your favicon."
+msgstr ""
+
+#: ../options.php:282
+msgid "Navigation"
+msgstr ""
+
+#: ../options.php:285
+msgid "Delay"
+msgstr ""
+
+#: ../options.php:286
+msgid "miliseconds delay on mouseout."
+msgstr ""
+
+#: ../options.php:292
+msgid "Fade-in animation"
+msgstr ""
+
+#: ../options.php:293
+msgid "Fade-in animation."
+msgstr ""
+
+#: ../options.php:299
+msgid "Slide-down animation"
+msgstr ""
+
+#: ../options.php:300
+msgid "Slide-down animation."
+msgstr ""
+
+#: ../options.php:306
+msgid "Speed"
+msgstr ""
+
+#: ../options.php:307
+msgid "Animation speed."
+msgstr ""
+
+#: ../options.php:314
+msgid "Arrows markup"
+msgstr ""
+
+#: ../options.php:315
+msgid "Do you want to generate arrow mark-up?"
+msgstr ""
+
+#: ../options.php:325 ../options.php:882
+msgid "Slider (visualisation)"
+msgstr ""
+
+#: ../options.php:328
+msgid "Show slider"
+msgstr ""
+
+#: ../options.php:329
+msgid "Show / Hide slider on home page"
+msgstr ""
+
+#: ../options.php:336
+msgid "Sliding effect"
+msgstr ""
+
+#: ../options.php:337
+msgid "Select your animation type"
+msgstr ""
+
+#: ../options.php:344
+msgid "Sliding direction"
+msgstr ""
+
+#: ../options.php:345
+msgid "Select the sliding direction"
+msgstr ""
+
+#: ../options.php:352
+msgid "Slideshow"
+msgstr ""
+
+#: ../options.php:353
+msgid "Animate slider automatically?"
+msgstr ""
+
+#: ../options.php:360
+msgid "Paging control"
+msgstr ""
+
+#: ../options.php:361
+msgid "Create navigation for paging control of each slide?"
+msgstr ""
+
+#: ../options.php:368
+msgid "Previous/Next navigation"
+msgstr ""
+
+#: ../options.php:369
+msgid "Create controls for previous/next navigation?"
+msgstr ""
+
+#: ../options.php:379 ../options.php:976
+msgid "Slider (content)"
+msgstr ""
+
+#: ../options.php:382
+msgid "How many slides to show?"
+msgstr ""
+
+#: ../options.php:383
+msgid "This is how many slides will be displayed."
+msgstr ""
+
+#: ../options.php:390
+msgid "Which category to pull from?"
+msgstr ""
+
+#: ../options.php:391
+msgid ""
+"Enter the slug of the category you'd like to pull slides from. Leave blank "
+"if you'd like to pull from all categories."
+msgstr ""
+
+#: ../options.php:397
+msgid "Slide as link to the post"
+msgstr ""
+
+#: ../options.php:398
+msgid "Add/remove permalink to slides"
+msgstr ""
+
+#: ../options.php:405
+msgid "Show/Hide slide caption"
+msgstr ""
+
+#: ../options.php:406
+msgid "Show/Hide slide caption."
+msgstr ""
+
+#: ../options.php:413
+msgid "Show/Hide slide caption title"
+msgstr ""
+
+#: ../options.php:414
+msgid "Show/Hide slide caption title."
+msgstr ""
+
+#: ../options.php:421
+msgid "Show/Hide slide caption excerpt"
+msgstr ""
+
+#: ../options.php:422
+msgid "Show/Hide slide caption excerpt."
+msgstr ""
+
+#: ../options.php:429
+msgid "Slide caption excerpt length"
+msgstr ""
+
+#: ../options.php:430
+msgid "How many words are displayed in the excerpt?"
+msgstr ""
+
+#: ../options.php:436 ../options.php:437
+msgid "Show/Hide slide caption button"
+msgstr ""
+
+#: ../options.php:444 ../options.php:445
+msgid "Slide caption button text"
+msgstr ""
+
+#: ../options.php:447 ../slider.php:64 ../inc/extras.php:209
+#: ../post-formats/gallery.php:43 ../post-formats/standard.php:39
+msgid "Read more"
+msgstr ""
+
+#: ../options.php:453 ../options.php:1112
+msgid "Blog"
+msgstr ""
+
+#: ../options.php:456
+msgid "Sidebar position"
+msgstr ""
+
+#: ../options.php:457
+msgid "Choose sidebar position."
+msgstr ""
+
+#: ../options.php:463
+msgid "Show featured image on Blog page"
+msgstr ""
+
+#: ../options.php:464
+msgid "Show or hide featured image on Blog page"
+msgstr ""
+
+#: ../options.php:471
+msgid "Show featured image on Single post page"
+msgstr ""
+
+#: ../options.php:472
+msgid "Show or hide featured image on Single post page"
+msgstr ""
+
+#: ../options.php:479
+msgid "Enable Meta for blog posts?"
+msgstr ""
+
+#: ../options.php:480
+msgid "Enable or Disable meta information for blog posts."
+msgstr ""
+
+#: ../options.php:486
+msgid "Enable excerpt for blog posts?"
+msgstr ""
+
+#: ../options.php:487
+msgid "Enable or Disable excerpt for blog posts."
+msgstr ""
+
+#: ../options.php:493
+msgid "Enable read more button for blog posts?"
+msgstr ""
+
+#: ../options.php:494
+msgid "Enable or Disable read more button for blog posts."
+msgstr ""
+
+#: ../options.php:500
+msgid "Enable social share buttons for single post"
+msgstr ""
+
+#: ../options.php:501
+msgid "Enable or Disable social share buttons for single post."
+msgstr ""
+
+#: ../options.php:507
+msgid "Show author bio on single post page?"
+msgstr ""
+
+#: ../options.php:508
+msgid "Show or hide author bio on single post page."
+msgstr ""
+
+#: ../options.php:515
+msgid "Related Posts Title"
+msgstr ""
+
+#: ../options.php:516
+msgid "Enter Your Title used on Single Post page for related posts."
+msgstr ""
+
+#: ../options.php:518
+msgid "Related posts"
+msgstr ""
+
+#: ../options.php:522 ../options.php:1264
+msgid "Footer"
+msgstr ""
+
+#: ../options.php:525
+msgid "Footer copyright text"
+msgstr ""
+
+#: ../options.php:526
+msgid "Enter text used in the right side of the footer. HTML tags are allowed."
+msgstr ""
+
+#: ../options.php:531
+msgid "Google Analytics Code"
+msgstr ""
+
+#: ../options.php:532
+msgid ""
+"You can paste your Google Analytics or other tracking code in this box. This "
+"will be automatically added to the footer."
+msgstr ""
+
+#: ../options.php:537
+msgid "Display Footer menu?"
+msgstr ""
+
+#: ../options.php:538
+msgid "Do you want to display footer menu?"
+msgstr ""
+
+#: ../search.php:16
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: ../sidebar.php:24
+msgid "Meta"
+msgstr ""
+
+#: ../inc/extras.php:66
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: ../options/options-framework.php:66
+#, php-format
+msgid ""
+"Your current theme does not have support for the Options Framework plugin.  "
+"<a href=\"%1$s\" target=\"_blank\">Learn More</a> | <a href=\"%2$s\">Hide "
+"Notice</a>"
+msgstr ""
+
+#: ../options/options-framework.php:255 ../options/options-framework.php:256
+#: ../options/options-framework.php:485
+msgid "Theme Options"
+msgstr ""
+
+#: ../options/options-framework.php:301
+msgid "Clear"
+msgstr ""
+
+#: ../options/options-framework.php:302
+msgid "Default"
+msgstr ""
+
+#: ../options/options-framework.php:303
+msgid "Select Color"
+msgstr ""
+
+#: ../options/options-framework.php:348
+msgid "Save Options"
+msgstr ""
+
+#: ../options/options-framework.php:349
+msgid "Restore Defaults"
+msgstr ""
+
+#: ../options/options-framework.php:349
+msgid "Click OK to reset. Any theme settings will be lost!"
+msgstr ""
+
+#: ../options/options-framework.php:381
+msgid "Default options restored."
+msgstr ""
+
+#: ../options/options-framework.php:435
+msgid "Options saved."
+msgstr ""
+
+#: ../options/options-media-uploader.php:46
+msgid "No file chosen"
+msgstr ""
+
+#: ../options/options-media-uploader.php:49
+#: ../options/options-media-uploader.php:106
+msgid "Upload"
+msgstr ""
+
+#: ../options/options-media-uploader.php:51
+#: ../options/options-media-uploader.php:107
+msgid "Remove"
+msgstr ""
+
+#: ../options/options-media-uploader.php:54
+msgid "Upgrade your version of WordPress for full media support."
+msgstr ""
+
+#: ../options/options-media-uploader.php:78
+msgid "View File"
+msgstr ""
+
+#: ../options/options-sanitize.php:236
+msgid "No Repeat"
+msgstr ""
+
+#: ../options/options-sanitize.php:237
+msgid "Repeat Horizontally"
+msgstr ""
+
+#: ../options/options-sanitize.php:238
+msgid "Repeat Vertically"
+msgstr ""
+
+#: ../options/options-sanitize.php:239
+msgid "Repeat All"
+msgstr ""
+
+#: ../options/options-sanitize.php:252
+msgid "Top Left"
+msgstr ""
+
+#: ../options/options-sanitize.php:253
+msgid "Top Center"
+msgstr ""
+
+#: ../options/options-sanitize.php:254
+msgid "Top Right"
+msgstr ""
+
+#: ../options/options-sanitize.php:255
+msgid "Middle Left"
+msgstr ""
+
+#: ../options/options-sanitize.php:256
+msgid "Middle Center"
+msgstr ""
+
+#: ../options/options-sanitize.php:257
+msgid "Middle Right"
+msgstr ""
+
+#: ../options/options-sanitize.php:258
+msgid "Bottom Left"
+msgstr ""
+
+#: ../options/options-sanitize.php:259
+msgid "Bottom Center"
+msgstr ""
+
+#: ../options/options-sanitize.php:260
+msgid "Bottom Right"
+msgstr ""
+
+#: ../options/options-sanitize.php:273
+msgid "Scroll Normally"
+msgstr ""
+
+#: ../options/options-sanitize.php:274
+msgid "Fixed in Place"
+msgstr ""
+
+#: ../options/options-sanitize.php:349
+msgid "Italic"
+msgstr ""
+
+#: ../options/options-sanitize.php:350
+msgid "Bold"
+msgstr ""
+
+#: ../options/options-sanitize.php:351
+msgid "Bold Italic"
+msgstr ""
+
+#: ../post-formats/aside.php:6 ../post-formats/audio.php:5
+#: ../post-formats/chat.php:5 ../post-formats/gallery.php:11
+#: ../post-formats/image.php:6 ../post-formats/link.php:6
+#: ../post-formats/quote.php:4 ../post-formats/standard.php:9
+#: ../post-formats/status.php:6 ../post-formats/video.php:13
+msgid "Featured"
+msgstr ""
+
+#: ../post-formats/aside.php:7 ../post-formats/audio.php:23
+#: ../post-formats/gallery.php:54 ../post-formats/image.php:31
+#: ../post-formats/link.php:35 ../post-formats/quote.php:15
+#: ../post-formats/status.php:7 ../post-formats/video.php:26
+msgid "Continue reading"
+msgstr ""
+
+#: ../post-formats/audio.php:7 ../post-formats/chat.php:7
+#: ../post-formats/gallery.php:15 ../post-formats/image.php:20
+#: ../post-formats/link.php:13 ../post-formats/link.php:23
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54 ../post-formats/post-thumb.php:4
+#: ../post-formats/standard.php:12 ../post-formats/video.php:15
+msgid "Permalink to:"
+msgstr ""
+
+#: ../post-formats/author-bio.php:15
+msgid "About"
+msgstr ""
+
+#: ../post-formats/post-meta.php:31 ../post-formats/post-meta.php:42
+#: ../post-formats/post-meta.php:54
+msgid "Permalink"
+msgstr ""
+
+#: ../post-formats/post-nav.php:9
+msgid "&laquo; Older Entries"
+msgstr ""
+
+#: ../post-formats/post-nav.php:12
+msgid "Newer Entries &raquo;"
+msgstr ""
+
+#: ../post-formats/related-posts.php:26
+msgid "Related Posts"
+msgstr ""
