@@ -94,14 +94,16 @@ function duena_gallery_sl() {
         	$gal_counter = 0;
         	foreach ( $attachments as $attachment ) {
         		$cur_url = wp_get_attachment_url( $attachment->ID, false );
+
         	?>
         		<li>
 	        	<?php
-	        		$gal_image = aq_resize( $cur_url, 770, 295, true );
+
+	        		$gal_image = wp_get_attachment_image_src( $attachment->ID,'thumbnail');
 	        		if ("" == $gal_image) $gal_image = $cur_url;
 	        	?>
 		        	<a href="<?php echo esc_url( $cur_url ); ?>" class="lightbox_img" data-effect="mfp-zoom-in">
-		        		<img src="<?php echo esc_url( $gal_image ); ?>" alt="">
+		        		<img src="<?php echo esc_url( $gal_image[0] ); ?>" alt="">
 		        	</a>
 	        	</li>
 	        	<?php
@@ -181,20 +183,14 @@ function duena_portfolio_show() {
 				?>
 				<div class="span4 portf_item">
 					<div class="hentry">
-						<?php
-							$post_id = get_the_ID();
-							$post_thumbnail_id = get_post_thumbnail_id( $post_id );
-							$cur_url = wp_get_attachment_url( $post_thumbnail_id, false );
-							$image = aq_resize( $cur_url, 370, 150, true );
-						?>
 						<figure class="featured-thumbnail thumbnail">
-							<a href="<?php echo get_permalink( $post_id ); ?>">
+							<a href="<?php echo get_permalink(); ?>">
 								<?php the_post_thumbnail(); ?>
 							</a>
 						</figure>
 						<div class="post_content">
 							<h5>
-								<a href="<?php echo get_permalink( $post_id ); ?>">
+								<a href="<?php echo get_permalink(); ?>">
 									<?php the_title(); ?>
 								</a>
 							</h5>

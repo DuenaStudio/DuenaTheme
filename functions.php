@@ -29,17 +29,12 @@ if ( !function_exists('duena_string_limit_words') ) {
 /*
  * Load Files.
  */
-//Loading aq_resizer.php for image resize
-require_once ( get_template_directory() . '/inc/aq_resizer.php' );
 
-//Loading aq_resizer.php for image resize
+//Loading editor.php
 require_once ( get_template_directory() . '/inc/editor.php' );
 
 //Loading options.php for theme customizer
 include_once( get_template_directory() . '/options.php');
-
-// Include editor
-// include_once( get_template_directory() . '/editor/tinymce_buttons.php');
 
 //Loads the Options Panel
 if ( !function_exists( 'optionsframework_init' ) ) {
@@ -129,6 +124,18 @@ function duena_setup() {
 	// This theme uses its own gallery styles.
 	add_filter( 'use_default_gallery_style', '__return_false' );
 
+	/**
+	 * Add image sizes
+	 */
+
+	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
+		add_theme_support( 'post-thumbnails' );
+		set_post_thumbnail_size( 770, 295, true ); // Normal post thumbnails
+		add_image_size( 'slider-post-thumbnail', 1170, 450, true ); // Slider Thumbnail
+		add_image_size( 'image_post_format', 770, 450, true ); // Image Post Format output
+		add_image_size( 'related-thumb', 160, 160, true ); // Realted Post Image output
+	}
+
 }
 endif; // duena_setup
 add_action( 'after_setup_theme', 'duena_setup' );
@@ -150,18 +157,6 @@ function duena_widgets_init() {
 }
 add_action( 'widgets_init', 'duena_widgets_init' );
 
-
-
-/**
- * Add image sizes
- */
-
-if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
-		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 770, 295, true ); // Normal post thumbnails
-		add_image_size( 'slider-post-thumbnail', 1170, 450, true ); // Slider Thumbnail
-		add_image_size( 'image_post_format', 770, 450, true ); // Image Post Format output
-	}
 
 
 /**

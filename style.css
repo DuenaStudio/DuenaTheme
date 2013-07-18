@@ -1,10 +1,10 @@
 /*
 Theme Name: Duena
-Theme URI: http://www.livedemo.themesbuddy.com/
+Theme URI: 
 Author: Duena Studio
 Author URI: http://profiles.wordpress.org/duena_studio
 Description: Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template! 
-Version: 1.0.1
+Version: 1.0.4
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
@@ -1739,6 +1739,9 @@ line-height:28px;
   margin-bottom: 10px;
   max-width: 100%;
 }
+.wp-caption.alignnone {
+  overflow: hidden;
+}
 .wp-caption img[class*="wp-image-"] {
   display: block;
   margin: 1.2% auto 0;
@@ -1750,6 +1753,9 @@ line-height:28px;
   margin: 0 5px;
   padding: 10px;
   border: 1px solid #EBEAE7;
+}
+.wp-caption.alignnone .wp-caption-text {
+  margin: 0;
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {

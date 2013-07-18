@@ -27,7 +27,6 @@
             $sl_image_url = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'slider-post-thumbnail');
     ?>
     <?php if(has_post_thumbnail( $post->ID )){
-        $image = aq_resize($sl_image_url[0], 1170, 450, true);
     ?>
         <li>
             <?php if ( 'false' != of_get_option('sl_as_link') ) { ?>

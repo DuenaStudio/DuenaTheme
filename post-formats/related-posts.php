@@ -34,11 +34,10 @@ if ($tags) {
 						<?php if(has_post_thumbnail()) { ?>
 							<?php
 								$thumb = get_post_thumbnail_id();
-								$img_url = wp_get_attachment_url( $thumb,'full'); //get img URL
-								$image = aq_resize( $img_url, 160, 160, true ); //resize & crop img
+								$img_url = wp_get_attachment_image_src( $thumb,'related-thumb'); //get img URL
 							?>
 							<figure class="thumbnail featured-thumbnail">
-								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $image ); ?>" alt="<?php the_title(); ?>" /></a>
+								<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><img src="<?php echo esc_url( $img_url[0] ); ?>" alt="<?php the_title(); ?>" /></a>
 							</figure>
 						<?php } else { ?>
 							<figure class="thumbnail featured-thumbnail">
