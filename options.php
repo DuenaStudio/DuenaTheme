@@ -659,7 +659,6 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_title]',
 				'type' => $options['g_author_bio_title']['type'],
-				'choices' => $options['g_author_bio_title']['options'],
 				'priority' => 14
 		) );
 
@@ -813,7 +812,6 @@ if(!function_exists('duena_register')) {
 				'section' => 'nav',
 				'settings' => 'duena[sf_delay]',
 				'type' => $options['sf_delay']['type'],
-				'choices' => $options['sf_delay']['options'],
 				'priority' => 11
 		) );
 
@@ -1001,7 +999,6 @@ if(!function_exists('duena_register')) {
 		        'section' => 'duena_slider_content',
 		        'settings' => 'duena[sl_category]',
 		        'type' => $options['sl_category']['type'],
-		        'choices' => $options['sl_category']['options'],
 		        'priority' => 12
 		) );
 
@@ -1071,7 +1068,6 @@ if(!function_exists('duena_register')) {
 		        'section' => 'duena_slider_content',
 		        'settings' => 'duena[sl_capt_exc_length]',
 		        'type' => $options['sl_capt_exc_length']['type'],
-		        'choices' => $options['sl_capt_exc_length']['options'],
 		        'priority' => 17
 		) );
 
@@ -1099,7 +1095,6 @@ if(!function_exists('duena_register')) {
 		        'section' => 'duena_slider_content',
 		        'settings' => 'duena[sl_capt_btn_txt]',
 		        'type' => $options['sl_capt_btn_txt']['type'],
-		        'choices' => $options['sl_capt_btn_txt']['options'],
 		        'priority' => 19
 		) );
 
@@ -1119,7 +1114,7 @@ if(!function_exists('duena_register')) {
 				'type' => 'option'
 		) );
 		$wp_customize->add_control( 'duena_blog_sidebar_pos', array(
-				'label' => $options['pblog_sidebar_pos']['name'],
+				'label' => $options['blog_sidebar_pos']['name'],
 				'section' => 'duena_blog',
 				'settings' => 'duena[blog_sidebar_pos]',
 				'type' => $options['blog_sidebar_pos']['type'],
@@ -1250,7 +1245,6 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_blog',
 				'settings' => 'duena[blog_related]',
 				'type' => $options['blog_related']['type'],
-				'choices' => $options['blog_related']['options'],
 				'priority' => 20
 		) );
 		
