@@ -4,13 +4,14 @@ Theme URI:
 Author: Duena Studio
 Author URI: http://profiles.wordpress.org/duena_studio
 Description: Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template! 
-Version: 1.0.5
-License: GNU General Public License v2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.7
+License: GNU General Public License v3 or later
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
 Text Domain: duena
 
-This theme is licensed under the GPL.
+Duena WordPress theme, Copyright (C) 2013 Duena Studio
+Duena WordPress theme is licensed under the GPL.
 */
 
 @import url(//fonts.googleapis.com/css?family=Damion);
@@ -1429,37 +1430,7 @@ margin-bottom:10px;
 .entry-attachment .attachment {
   padding: 0 0 15px 0;
 }
-/* Socials */
-.social_bookmark {
-  font-size: 0;
-  line-height: 0;
-  padding: 9px 15px 10px;
-  margin: 0 -20px -6px;
-  background: #f7f6f5;
-  border-top: 1px solid #ebeae7;
-  border-radius: 0;
-}
-.social_bookmark a {
-  -webkit-transition: none;
-  -moz-transition: none;
-  -ms-transition: none;
-  -o-transition: none;
-  transition: none;
-}
-.social_bookmark iframe {
-  max-width: none;
-}
-.social_bookmark > span {
-  display: inline-block;
-  vertical-align: top;
-  font-size: 12px;
-  line-height: 18px;
-  height: 22px;
-}
-.social_bookmark > span.facebook {
-  padding: 1px 15px 0 0;
-  height: 21px;
-}
+
 /* Author bio */
 .author-info {
   padding: 20px;

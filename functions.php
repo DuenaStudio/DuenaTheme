@@ -30,16 +30,13 @@ if ( !function_exists('duena_string_limit_words') ) {
  * Load Files.
  */
 
-//Loading editor.php
-require_once ( get_template_directory() . '/inc/editor.php' );
-
 //Loading options.php for theme customizer
 include_once( get_template_directory() . '/options.php');
 
 //Loads the Options Panel
 if ( !function_exists( 'optionsframework_init' ) ) {
 	define( 'OPTIONS_FRAMEWORK_DIRECTORY', get_template_directory_uri() . '/options/' );
-	include_once(get_template_directory() . '/options/options-framework.php');
+	include_once( get_template_directory() . '/options/options-framework.php' );
 }
 	
 

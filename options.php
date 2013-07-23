@@ -166,7 +166,7 @@ if(!function_exists('optionsframework_options')) {
 		// Pull all the pages into an array
 		$options_pages = array();  
 		$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
-		$options_pages[''] = 'Select a page:';
+		$options_pages[''] = __( "Select a page:", "duena" );
 		foreach ($options_pages_obj as $page) {
 				$options_pages[$page->ID] = $page->post_title;
 		}
@@ -493,13 +493,6 @@ if(!function_exists('optionsframework_options')) {
 		$options['post_button'] = array( "name" => __( "Enable read more button for blog posts?", "duena" ),
 							"desc" => __( "Enable or Disable read more button for blog posts.", "duena" ),
 							"id" => "post_button",
-							"std" => "true",
-							"type" => "radio",
-							"options" => $post_opt_array);
-
-		$options['post_share'] = array( "name" => __( "Enable social share buttons for single post", "duena" ),
-							"desc" => __( "Enable or Disable social share buttons for single post.", "duena" ),
-							"id" => "post_share",
 							"std" => "true",
 							"type" => "radio",
 							"options" => $post_opt_array);
@@ -1206,21 +1199,8 @@ if(!function_exists('duena_register')) {
 				'priority' => 17
 		) );
 
-		/* Share Buttons */
-		$wp_customize->add_setting( 'duena[post_share]', array(
-				'default' => $options['post_share']['std'],
-				'type' => 'option'
-		) );
-		$wp_customize->add_control( 'duena_post_share', array(
-				'label' => $options['post_share']['name'],
-				'section' => 'duena_blog',
-				'settings' => 'duena[post_share]',
-				'type' => $options['post_share']['type'],
-				'choices' => $options['post_share']['options'],
-				'priority' => 18
-		) );
 
-		/* Share Buttons */
+		/* Post author */
 		$wp_customize->add_setting( 'duena[post_author]', array(
 				'default' => $options['post_author']['std'],
 				'type' => 'option'
@@ -1235,7 +1215,7 @@ if(!function_exists('duena_register')) {
 		) );
 		
 
-		/* Post Button */
+		/* Related title */
 		$wp_customize->add_setting( 'duena[blog_related]', array(
 				'default' => $options['blog_related']['std'],
 				'type' => 'option'

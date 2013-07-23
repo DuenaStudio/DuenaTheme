@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duena\n"
-"POT-Creation-Date: 2013-05-23 17:14+0200\n"
-"PO-Revision-Date: 2013-05-23 17:14+0200\n"
+"POT-Creation-Date: 2013-07-22 10:12+0200\n"
+"PO-Revision-Date: 2013-07-22 10:12+0200\n"
 "Last-Translator: Duena <Duena@demomail.org>\n"
 "Language-Team: Duena <duena@demomail.org>\n"
 "MIME-Version: 1.0\n"
@@ -132,28 +132,28 @@ msgstr ""
 msgid "Proudly powered by %s"
 msgstr ""
 
-#: ../functions.php:111
+#: ../functions.php:103
 msgid "Primary Menu"
 msgstr ""
 
-#: ../functions.php:112
+#: ../functions.php:104
 msgid "Footer Menu"
 msgstr ""
 
-#: ../functions.php:143
+#: ../functions.php:147
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:503
+#: ../functions.php:498
 #, php-format
 msgid "<span class=\"author fn\">%1$s</span>"
 msgstr ""
 
-#: ../functions.php:506
+#: ../functions.php:501
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:516
+#: ../functions.php:511
 #, php-format
 msgid "%1$s"
 msgstr ""
@@ -312,7 +312,11 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: ../options.php:179 ../options.php:605
+#: ../options.php:169
+msgid "Select a page:"
+msgstr ""
+
+#: ../options.php:179 ../options.php:598
 msgid "General"
 msgstr ""
 
@@ -409,7 +413,7 @@ msgstr ""
 msgid "Enter Author RSS URL"
 msgstr ""
 
-#: ../options.php:261 ../options.php:760
+#: ../options.php:261 ../options.php:752
 msgid "Logo & Favicon"
 msgstr ""
 
@@ -484,7 +488,7 @@ msgstr ""
 msgid "Do you want to generate arrow mark-up?"
 msgstr ""
 
-#: ../options.php:325 ../options.php:882
+#: ../options.php:325 ../options.php:873
 msgid "Slider (visualisation)"
 msgstr ""
 
@@ -536,7 +540,7 @@ msgstr ""
 msgid "Create controls for previous/next navigation?"
 msgstr ""
 
-#: ../options.php:379 ../options.php:976
+#: ../options.php:379 ../options.php:967
 msgid "Slider (content)"
 msgstr ""
 
@@ -606,12 +610,12 @@ msgstr ""
 msgid "Slide caption button text"
 msgstr ""
 
-#: ../options.php:447 ../slider.php:64 ../inc/extras.php:209
+#: ../options.php:447 ../slider.php:63 ../inc/extras.php:207
 #: ../post-formats/gallery.php:43 ../post-formats/standard.php:39
 msgid "Read more"
 msgstr ""
 
-#: ../options.php:453 ../options.php:1112
+#: ../options.php:453 ../options.php:1100
 msgid "Blog"
 msgstr ""
 
@@ -664,60 +668,52 @@ msgid "Enable or Disable read more button for blog posts."
 msgstr ""
 
 #: ../options.php:500
-msgid "Enable social share buttons for single post"
-msgstr ""
-
-#: ../options.php:501
-msgid "Enable or Disable social share buttons for single post."
-msgstr ""
-
-#: ../options.php:507
 msgid "Show author bio on single post page?"
 msgstr ""
 
-#: ../options.php:508
+#: ../options.php:501
 msgid "Show or hide author bio on single post page."
 msgstr ""
 
-#: ../options.php:515
+#: ../options.php:508
 msgid "Related Posts Title"
 msgstr ""
 
-#: ../options.php:516
+#: ../options.php:509
 msgid "Enter Your Title used on Single Post page for related posts."
 msgstr ""
 
-#: ../options.php:518
+#: ../options.php:511
 msgid "Related posts"
 msgstr ""
 
-#: ../options.php:522 ../options.php:1264
+#: ../options.php:515 ../options.php:1238
 msgid "Footer"
 msgstr ""
 
-#: ../options.php:525
+#: ../options.php:518
 msgid "Footer copyright text"
 msgstr ""
 
-#: ../options.php:526
+#: ../options.php:519
 msgid "Enter text used in the right side of the footer. HTML tags are allowed."
 msgstr ""
 
-#: ../options.php:531
+#: ../options.php:524
 msgid "Google Analytics Code"
 msgstr ""
 
-#: ../options.php:532
+#: ../options.php:525
 msgid ""
 "You can paste your Google Analytics or other tracking code in this box. This "
 "will be automatically added to the footer."
 msgstr ""
 
-#: ../options.php:537
+#: ../options.php:530
 msgid "Display Footer menu?"
 msgstr ""
 
-#: ../options.php:538
+#: ../options.php:531
 msgid "Do you want to display footer menu?"
 msgstr ""
 
