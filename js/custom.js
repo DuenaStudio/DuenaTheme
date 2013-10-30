@@ -10,7 +10,7 @@ jQuery(function() {
 	jQuery('#toTop').click(function() {
 		jQuery('body,html').animate({scrollTop:0},800);
 	});	
-	jQuery(".post_format_image a").append('<span class="hover_overlay"><i class="icon-zoom-in"></a></span>');
+	jQuery(".post_format_image a").append('<span class="hover_overlay"><i class="icon-zoom-in"></i></span>');
 	jQuery(".post_format_image a").magnificPopup({
 		type: 'image',
 		removalDelay: 500, //delay removal by X to allow out-animation
@@ -22,7 +22,7 @@ jQuery(function() {
 		    }
 		}
 	});
-	jQuery(".lightbox_img").append('<span class="hover_overlay"><i class="icon-zoom-in"></a></span>');
+	jQuery(".lightbox_img").append('<span class="hover_overlay"><i class="icon-zoom-in"></i></span>');
 	jQuery(".lightbox_img").magnificPopup({
 		type: 'image',
 		removalDelay: 500, //delay removal by X to allow out-animation
@@ -45,18 +45,7 @@ jQuery(function() {
 		    }
 		}
 	});
-	jQuery(".gallery_slider .lightbox_img").magnificPopup({
-		type: 'image',
-		removalDelay: 500, //delay removal by X to allow out-animation
-		callbacks: {
-		    beforeOpen: function() {
-		      // just a hack that adds mfp-anim class to markup 
-		       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-		       this.st.mainClass = this.st.el.attr('data-effect');
-		    }
-		},
-		gallery:{enabled:true}
-	});
+
 	jQuery(".lightbox_img").hover(
 		function(){
 			jQuery(this).find('.hover_overlay').stop().animate({opacity:0.6}, 400)

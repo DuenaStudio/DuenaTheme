@@ -73,8 +73,9 @@ add_filter( 'wp_title', 'duena_wp_title', 10, 2 );
  * Show gallery on blog page
  */
 function duena_gallery_sl() {
+	global $post;
 	?>
-	<div class="gallery_slider">
+	<div class="gallery_slider gallery-<?php echo $post->ID; ?>">
 	<?php
 		global $post;
         $args = array(
@@ -99,7 +100,7 @@ function duena_gallery_sl() {
         		<li>
 	        	<?php
 
-	        		$gal_image = wp_get_attachment_image_src( $attachment->ID,'thumbnail');
+	        		$gal_image = wp_get_attachment_image_src( $attachment->ID,'image_post_format' );
 	        		if ("" == $gal_image) $gal_image = $cur_url;
 	        	?>
 		        	<a href="<?php echo esc_url( $cur_url ); ?>" class="lightbox_img" data-effect="mfp-zoom-in">
@@ -118,12 +119,25 @@ function duena_gallery_sl() {
 	<script type="text/javascript">
 	/* <![CDATA[ */
 	    jQuery(window).load(function() {
-	        jQuery('.gallery_slider').flexslider({
+	        jQuery('.gallery-<?php echo $post->ID; ?>').flexslider({
 	            animation: 'fade',
 	            slideshow: true,
 	            controlNav: true,
 	            directionNav: false
-	        }); 
+	        });
+
+	        jQuery(".gallery-<?php echo $post->ID; ?> .lightbox_img").magnificPopup({
+				type: 'image',
+				removalDelay: 500, //delay removal by X to allow out-animation
+				callbacks: {
+				    beforeOpen: function() {
+				      // just a hack that adds mfp-anim class to markup 
+				       this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+				       this.st.mainClass = this.st.el.attr('data-effect');
+				    }
+				},
+				gallery:{enabled:true}
+			});
 	    });
 	/* ]]> */
 	</script>
@@ -172,7 +186,8 @@ function duena_portfolio_show() {
 	global $post;
 	$post_num = get_option( 'posts_per_page' );
 	$args = array(
-		'posts_per_page' => $post_num
+		'posts_per_page' => $post_num,
+		'category_name' => esc_attr(of_get_option('g_portfolio_cat')),
 	);
 	$count_portf = 0;
 	$portf_query = new WP_Query( $args );

@@ -193,6 +193,12 @@ if(!function_exists('optionsframework_options')) {
 							"std" => "yes",
 							"options" => $g_breadcrumb);
 
+		$options['g_portfolio_cat'] = array( "name" => __( "Category slug for portfolio page", "duena" ),
+							"desc" => __( "Enter category slug, from which you like to fill portfolio page", "duena" ),
+							"id" => "g_portfolio_cat",
+							"type" => "text",
+							"std" => "");
+
 		$options['g_author_bio'] = array( "name" => __( "Display Author Bio in sidebar", "duena" ),
 							"desc" => __( "Show/hide author bio in sidebar", "duena" ),
 							"id" => "g_author_bio",
@@ -336,7 +342,7 @@ if(!function_exists('optionsframework_options')) {
         $options['sl_effect'] = array( "name" => __( "Sliding effect", "duena" ),
                             "desc" => __( "Select your animation type", "duena" ),
                             "id" => "sl_effect",
-                            "std" => "random",
+                            "std" => "fade",
                             "type" => "select",
                             "class" => "tiny", //mini, tiny, small
                             "options" => $sl_effect_array);
@@ -344,7 +350,7 @@ if(!function_exists('optionsframework_options')) {
         $options['sl_direction'] = array( "name" => __( "Sliding direction", "duena" ),
                             "desc" => __( "Select the sliding direction", "duena" ),
                             "id" => "sl_direction",
-                            "std" => "random",
+                            "std" => "horizontal",
                             "type" => "select",
                             "class" => "tiny", //mini, tiny, small
                             "options" => $sl_direction_array);
@@ -497,6 +503,13 @@ if(!function_exists('optionsframework_options')) {
 							"type" => "radio",
 							"options" => $post_opt_array);
 
+		$options['post_button_txt'] = array( "name" => __( "'Read more' button text", "duena" ),
+                            "desc" => __( "Enter 'read more' button text.", "duena" ),
+                            "id" => "post_button_txt",
+                            "std" => __( "Read More", "duena" ),
+                            "type" => "text",
+                            "class" => "tiny");
+
 		$options['post_author'] = array( "name" => __( "Show author bio on single post page?", "duena" ),
 							"desc" => __( "Show or hide author bio on single post page.", "duena" ),
 							"id" => "post_author",
@@ -628,6 +641,19 @@ if(!function_exists('duena_register')) {
 				'priority' => 12
 		) );
 
+		/* Portfolio cat */
+		$wp_customize->add_setting( 'duena[g_portfolio_cat]', array(
+				'default' => $options['g_portfolio_cat']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'duena_g_portfolio_cat', array(
+				'label' => $options['g_portfolio_cat']['name'],
+				'section' => 'duena_header',
+				'settings' => 'duena[g_portfolio_cat]',
+				'type' => $options['g_portfolio_cat']['type'],
+				'priority' => 13
+		) );
+
 		/* g_author_bio */
 		$wp_customize->add_setting( 'duena[g_author_bio]', array(
 				'default' => $options['g_author_bio']['std'],
@@ -639,7 +665,7 @@ if(!function_exists('duena_register')) {
 				'settings' => 'duena[g_author_bio]',
 				'type' => $options['g_author_bio']['type'],
 				'choices' => $options['g_author_bio']['options'],
-				'priority' => 13
+				'priority' => 14
 		) );
 
 		/* g_author_bio_title */
@@ -652,7 +678,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_title]',
 				'type' => $options['g_author_bio_title']['type'],
-				'priority' => 14
+				'priority' => 15
 		) );
 
 		/* g_author_bio_img */
@@ -663,7 +689,7 @@ if(!function_exists('duena_register')) {
 			'label' => $options['g_author_bio_img']['name'],
 			'section' => 'duena_header',
 			'settings' => 'duena[g_author_bio_img]',
-			'priority' => 15
+			'priority' => 16
 		) ) );
 
 		/* g_author_bio_message */
@@ -676,7 +702,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_message]',
 				'type' => 'text',
-				'priority' => 16
+				'priority' => 17
 		) );
 
 		/* g_author_bio_social_twitter */
@@ -689,7 +715,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_social_twitter]',
 				'type' => $options['g_author_bio_social_twitter']['type'],
-				'priority' => 17
+				'priority' => 18
 		) );
 
 		/* g_author_bio_social_facebook */
@@ -702,7 +728,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_social_facebook]',
 				'type' => $options['g_author_bio_social_facebook']['type'],
-				'priority' => 18
+				'priority' => 19
 		) );
 
 		/* g_author_bio_social_google */
@@ -715,7 +741,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_social_google]',
 				'type' => $options['g_author_bio_social_google']['type'],
-				'priority' => 19
+				'priority' => 20
 		) );
 
 		/* g_author_bio_social_linked */
@@ -728,7 +754,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_social_linked]',
 				'type' => $options['g_author_bio_social_linked']['type'],
-				'priority' => 20
+				'priority' => 21
 		) );
 
 		/* g_author_bio_social_rss */
@@ -741,7 +767,7 @@ if(!function_exists('duena_register')) {
 				'section' => 'duena_header',
 				'settings' => 'duena[g_author_bio_social_rss]',
 				'type' => $options['g_author_bio_social_rss']['type'],
-				'priority' => 21
+				'priority' => 22
 		) );
 		
 		/*-----------------------------------------------------------------------------------*/
@@ -1185,17 +1211,16 @@ if(!function_exists('duena_register')) {
 				'priority' => 16
 		) );
 
-		/* Post Button */
-		$wp_customize->add_setting( 'duena[post_button]', array(
-				'default' => $options['post_button']['std'],
+		/* Post Button Text */
+		$wp_customize->add_setting( 'duena[post_button_txt]', array(
+				'default' => $options['post_button_txt']['std'],
 				'type' => 'option'
 		) );
-		$wp_customize->add_control( 'duena_post_button', array(
-				'label' => $options['post_button']['name'],
+		$wp_customize->add_control( 'duena_post_button_txt', array(
+				'label' => $options['post_button_txt']['name'],
 				'section' => 'duena_blog',
-				'settings' => 'duena[post_button]',
-				'type' => $options['post_button']['type'],
-				'choices' => $options['post_button']['options'],
+				'settings' => 'duena[post_button_txt]',
+				'type' => $options['post_button_txt']['type'],
 				'priority' => 17
 		) );
 

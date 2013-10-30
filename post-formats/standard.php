@@ -35,8 +35,12 @@
 						?>
 						</div>
 					<?php } ?>
-					<?php if ( 'false' != of_get_option('post_button')) { ?>
-						<a href="<?php the_permalink() ?>" class="more_link"><?php _e('Read more', 'duena'); ?></a>
+					<?php 
+						if ( 'false' != of_get_option('post_button')) { 
+							$button_text = of_get_option( 'post_button_txt' );
+							if ( '' == $button_text ) $button_text = __( 'Read more', 'duena' );
+					?>
+						<a href="<?php the_permalink() ?>" class="more_link"><?php echo $button_text; ?></a>
 					<?php } ?>
 				</div>
 				

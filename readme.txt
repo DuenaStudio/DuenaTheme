@@ -25,3 +25,19 @@ http://www.wptheming.com
 
 Other icons and images are created by Duena Studio and licensed under GPL.
 --------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------
+Changelog
+--------------------------------------------------------------------------------
+
+1.1.0
+
+- Fixed styles for taxonomy description.
+- Fixed init for lightboxes in gallery post format.
+- Fixed word-break for paragraphs
+- Fixed slider's caption position when using sliding effect
+- Fixed pasting tags for lightbox hover overlay
+- Enhancement: add option for choosing category for portfolio page
+template
+- Enhancement: add option for changing "Read more" button text on blog page
