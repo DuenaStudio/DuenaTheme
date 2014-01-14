@@ -7,11 +7,16 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="span12">
+	<div id="primary" class="col-md-12">
 		<div id="content" class="site-content" role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	
-		<div class="page_wrap">		
+		<div class="page_wrap fullwidth-page">
+			<?php
+			if ( has_post_thumbnail() ) {
+				echo '<figure class="featured-thumbnail thumbnail">' . get_the_post_thumbnail( get_the_id(), 'slider-post-thumbnail' ) . '</figure>';
+			}
+			?>	
 			<h1 class="post-title"><?php the_title(); ?></h1>
 			<div class="post_content">
 				<?php the_content(''); ?>

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Duena\n"
-"POT-Creation-Date: 2013-10-01 10:23+0200\n"
-"PO-Revision-Date: 2013-10-01 10:23+0200\n"
+"POT-Creation-Date: 2013-12-27 16:52+0200\n"
+"PO-Revision-Date: 2013-12-27 16:53+0200\n"
 "Last-Translator: Duena <Duena@demomail.org>\n"
 "Language-Team: Duena <duena@demomail.org>\n"
 "MIME-Version: 1.0\n"
@@ -44,7 +44,7 @@ msgstr ""
 msgid "Tag Archives: %s"
 msgstr ""
 
-#: ../archive.php:31 ../author.php:50
+#: ../archive.php:31 ../author.php:45
 #, php-format
 msgid "Author Archives: %s"
 msgstr ""
@@ -93,7 +93,7 @@ msgstr ""
 msgid "About: %s"
 msgstr ""
 
-#: ../author.php:72 ../index.php:34 ../no-results.php:28
+#: ../author.php:61 ../index.php:34 ../no-results.php:28
 #: ../post-formats/index.php:30
 msgid ""
 "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
@@ -140,20 +140,28 @@ msgstr ""
 msgid "Footer Menu"
 msgstr ""
 
-#: ../functions.php:147
+#: ../functions.php:149
 msgid "Sidebar"
 msgstr ""
 
-#: ../functions.php:498
+#: ../functions.php:500
+msgid "&larr; Previous"
+msgstr ""
+
+#: ../functions.php:501
+msgid "Next &rarr;"
+msgstr ""
+
+#: ../functions.php:529
 #, php-format
 msgid "<span class=\"author fn\">%1$s</span>"
 msgstr ""
 
-#: ../functions.php:501
+#: ../functions.php:532
 msgid "Your comment is awaiting moderation."
 msgstr ""
 
-#: ../functions.php:511
+#: ../functions.php:542
 #, php-format
 msgid "%1$s"
 msgstr ""
@@ -179,7 +187,7 @@ msgstr ""
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr ""
 
-#: ../image.php:98 ../page-templates/fullwidth.php:18
+#: ../image.php:98 ../page-templates/fullwidth.php:23
 #: ../post-formats/aside.php:8 ../post-formats/audio.php:28
 #: ../post-formats/chat.php:23 ../post-formats/gallery.php:59
 #: ../post-formats/image.php:37 ../post-formats/link.php:36
@@ -312,428 +320,497 @@ msgstr ""
 msgid "Right Sidebar"
 msgstr ""
 
-#: ../options.php:169
+#: ../options.php:166 ../inc/extras.php:427
+msgid "Select from all"
+msgstr ""
+
+#: ../options.php:171
 msgid "Select a page:"
 msgstr ""
 
-#: ../options.php:179 ../options.php:611
+#: ../options.php:181 ../options.php:663
 msgid "General"
 msgstr ""
 
-#: ../options.php:182
+#: ../options.php:184
 msgid "Display search box?"
 msgstr ""
 
-#: ../options.php:183
+#: ../options.php:185
 msgid "Display search box in the header?"
 msgstr ""
 
-#: ../options.php:189 ../options.php:190
+#: ../options.php:191 ../options.php:192
 msgid "Display breadcrumbs?"
 msgstr ""
 
-#: ../options.php:196
+#: ../options.php:198
 msgid "Category slug for portfolio page"
 msgstr ""
 
-#: ../options.php:197
+#: ../options.php:199
 msgid "Enter category slug, from which you like to fill portfolio page"
 msgstr ""
 
-#: ../options.php:202
+#: ../options.php:204
 msgid "Display Author Bio in sidebar"
 msgstr ""
 
-#: ../options.php:203
+#: ../options.php:205
 msgid "Show/hide author bio in sidebar"
 msgstr ""
 
-#: ../options.php:209
+#: ../options.php:211
 msgid "Author Bio Title"
 msgstr ""
 
-#: ../options.php:210
+#: ../options.php:212
 msgid "Enter Author Bio Title"
 msgstr ""
 
-#: ../options.php:214
+#: ../options.php:216
 msgid "Welcome to my site"
 msgstr ""
 
-#: ../options.php:216
+#: ../options.php:218
 msgid "Author Bio image"
 msgstr ""
 
-#: ../options.php:217
+#: ../options.php:219
 msgid "Upload Author Bio image"
 msgstr ""
 
-#: ../options.php:222
+#: ../options.php:224
 msgid "Author Bio Message"
 msgstr ""
 
-#: ../options.php:223
+#: ../options.php:225
 msgid "Enter Author Bio Message (HTML tags allowed)"
 msgstr ""
 
-#: ../options.php:227
+#: ../options.php:229
 msgid ""
 "Hello, and welcome to my site! I hope you like the place and decide to stay."
 msgstr ""
 
-#: ../options.php:229
+#: ../options.php:231
 msgid "Author Twitter URL"
 msgstr ""
 
-#: ../options.php:230
+#: ../options.php:232
 msgid "Enter Author Twitter URL"
 msgstr ""
 
-#: ../options.php:236
+#: ../options.php:238
 msgid "Author Facebook URL"
 msgstr ""
 
-#: ../options.php:237
+#: ../options.php:239
 msgid "Enter Author Facebook URL"
 msgstr ""
 
-#: ../options.php:243
+#: ../options.php:245
 msgid "Author Google+ URL"
 msgstr ""
 
-#: ../options.php:244
+#: ../options.php:246
 msgid "Enter Author Google+ URL"
 msgstr ""
 
-#: ../options.php:250
+#: ../options.php:252
 msgid "Author LinkedIn URL"
 msgstr ""
 
-#: ../options.php:251
+#: ../options.php:253
 msgid "Enter Author LinkedIn URL"
 msgstr ""
 
-#: ../options.php:257
+#: ../options.php:259
 msgid "Author RSS URL"
 msgstr ""
 
-#: ../options.php:258
+#: ../options.php:260
 msgid "Enter Author RSS URL"
 msgstr ""
 
-#: ../options.php:267 ../options.php:778
+#: ../options.php:269 ../options.php:830
 msgid "Logo & Favicon"
 msgstr ""
 
-#: ../options.php:270
+#: ../options.php:272
 msgid "What kind of logo?"
 msgstr ""
 
-#: ../options.php:271
+#: ../options.php:273
 msgid ""
 "Select whether you want your main logo to be an image or text. If you select "
 "'image' you can put in the image url in the next option, and if you select "
 "'text' your Site Title will show instead."
 msgstr ""
 
-#: ../options.php:277
+#: ../options.php:279
 msgid "Logo Image Path"
 msgstr ""
 
-#: ../options.php:278
+#: ../options.php:280
 msgid "Upload logo image"
 msgstr ""
 
-#: ../options.php:282
+#: ../options.php:284
 msgid "Favicon"
 msgstr ""
 
-#: ../options.php:283
+#: ../options.php:285
 msgid "Click Upload or Enter the direct path to your favicon."
 msgstr ""
 
-#: ../options.php:288
-msgid "Navigation"
+#: ../options.php:290
+msgid "Color scheme"
 msgstr ""
 
-#: ../options.php:291
-msgid "Delay"
+#: ../options.php:293
+msgid "Primary color"
 msgstr ""
 
-#: ../options.php:292
-msgid "miliseconds delay on mouseout."
-msgstr ""
-
-#: ../options.php:298
-msgid "Fade-in animation"
+#: ../options.php:294
+msgid ""
+"Color of links, borders on content boxes, social icons, meta icons, post "
+"type labels"
 msgstr ""
 
 #: ../options.php:299
-msgid "Fade-in animation."
+msgid "Secondary color"
 msgstr ""
 
-#: ../options.php:305
-msgid "Slide-down animation"
+#: ../options.php:300
+msgid "Color of links hovers"
 msgstr ""
 
 #: ../options.php:306
-msgid "Slide-down animation."
+msgid "Default list bullet"
+msgstr ""
+
+#: ../options.php:307
+msgid ""
+"Upload image for list bullet (Note. Use small image for bullet, not larger "
+"than 10*10px, also reccomended to leave some empty space at image before "
+"bullet(5-8px))"
 msgstr ""
 
 #: ../options.php:312
+msgid "Navigation"
+msgstr ""
+
+#: ../options.php:315
+msgid "Delay"
+msgstr ""
+
+#: ../options.php:316
+msgid "miliseconds delay on mouseout."
+msgstr ""
+
+#: ../options.php:322
+msgid "Fade-in animation"
+msgstr ""
+
+#: ../options.php:323
+msgid "Fade-in animation."
+msgstr ""
+
+#: ../options.php:329
+msgid "Slide-down animation"
+msgstr ""
+
+#: ../options.php:330
+msgid "Slide-down animation."
+msgstr ""
+
+#: ../options.php:336
 msgid "Speed"
 msgstr ""
 
-#: ../options.php:313
+#: ../options.php:337
 msgid "Animation speed."
 msgstr ""
 
-#: ../options.php:320
+#: ../options.php:344
 msgid "Arrows markup"
 msgstr ""
 
-#: ../options.php:321
+#: ../options.php:345
 msgid "Do you want to generate arrow mark-up?"
 msgstr ""
 
-#: ../options.php:331 ../options.php:899
+#: ../options.php:352 ../options.php:951
 msgid "Slider (visualisation)"
 msgstr ""
 
-#: ../options.php:334
+#: ../options.php:355
 msgid "Show slider"
 msgstr ""
 
-#: ../options.php:335
+#: ../options.php:356
 msgid "Show / Hide slider on home page"
 msgstr ""
 
-#: ../options.php:342
+#: ../options.php:363
 msgid "Sliding effect"
 msgstr ""
 
-#: ../options.php:343
+#: ../options.php:364
 msgid "Select your animation type"
 msgstr ""
 
-#: ../options.php:350
+#: ../options.php:371
 msgid "Sliding direction"
 msgstr ""
 
-#: ../options.php:351
+#: ../options.php:372
 msgid "Select the sliding direction"
 msgstr ""
 
-#: ../options.php:358
+#: ../options.php:379
 msgid "Slideshow"
 msgstr ""
 
-#: ../options.php:359
+#: ../options.php:380
 msgid "Animate slider automatically?"
 msgstr ""
 
-#: ../options.php:366
+#: ../options.php:387
 msgid "Paging control"
 msgstr ""
 
-#: ../options.php:367
+#: ../options.php:388
 msgid "Create navigation for paging control of each slide?"
 msgstr ""
 
-#: ../options.php:374
+#: ../options.php:395
 msgid "Previous/Next navigation"
 msgstr ""
 
-#: ../options.php:375
+#: ../options.php:396
 msgid "Create controls for previous/next navigation?"
 msgstr ""
 
-#: ../options.php:385 ../options.php:993
+#: ../options.php:406 ../options.php:1045
 msgid "Slider (content)"
 msgstr ""
 
-#: ../options.php:388
+#: ../options.php:409
 msgid "How many slides to show?"
 msgstr ""
 
-#: ../options.php:389
+#: ../options.php:410
 msgid "This is how many slides will be displayed."
 msgstr ""
 
-#: ../options.php:396
+#: ../options.php:417
 msgid "Which category to pull from?"
 msgstr ""
 
-#: ../options.php:397
-msgid ""
-"Enter the slug of the category you'd like to pull slides from. Leave blank "
-"if you'd like to pull from all categories."
+#: ../options.php:418
+msgid "Select the category you'd like to pull slides from."
 msgstr ""
 
-#: ../options.php:403
+#: ../options.php:424
 msgid "Slide as link to the post"
 msgstr ""
 
-#: ../options.php:404
+#: ../options.php:425
 msgid "Add/remove permalink to slides"
 msgstr ""
 
-#: ../options.php:411
+#: ../options.php:432
 msgid "Show/Hide slide caption"
 msgstr ""
 
-#: ../options.php:412
+#: ../options.php:433
 msgid "Show/Hide slide caption."
 msgstr ""
 
-#: ../options.php:419
+#: ../options.php:440
 msgid "Show/Hide slide caption title"
 msgstr ""
 
-#: ../options.php:420
+#: ../options.php:441
 msgid "Show/Hide slide caption title."
 msgstr ""
 
-#: ../options.php:427
+#: ../options.php:448
 msgid "Show/Hide slide caption excerpt"
 msgstr ""
 
-#: ../options.php:428
+#: ../options.php:449
 msgid "Show/Hide slide caption excerpt."
 msgstr ""
 
-#: ../options.php:435
+#: ../options.php:456
 msgid "Slide caption excerpt length"
 msgstr ""
 
-#: ../options.php:436
+#: ../options.php:457
 msgid "How many words are displayed in the excerpt?"
 msgstr ""
 
-#: ../options.php:442 ../options.php:443
+#: ../options.php:463 ../options.php:464
 msgid "Show/Hide slide caption button"
 msgstr ""
 
-#: ../options.php:450 ../options.php:451
+#: ../options.php:471 ../options.php:472
 msgid "Slide caption button text"
 msgstr ""
 
-#: ../options.php:453 ../slider.php:63 ../inc/extras.php:222
+#: ../options.php:474 ../slider.php:68 ../inc/extras.php:290
 #: ../post-formats/gallery.php:43 ../post-formats/standard.php:41
 msgid "Read more"
 msgstr ""
 
-#: ../options.php:459 ../options.php:1126
+#: ../options.php:480 ../options.php:1178
 msgid "Blog"
 msgstr ""
 
-#: ../options.php:462
+#: ../options.php:483
 msgid "Sidebar position"
 msgstr ""
 
-#: ../options.php:463
+#: ../options.php:484
 msgid "Choose sidebar position."
 msgstr ""
 
-#: ../options.php:469
+#: ../options.php:490
 msgid "Show featured image on Blog page"
 msgstr ""
 
-#: ../options.php:470
+#: ../options.php:491
 msgid "Show or hide featured image on Blog page"
 msgstr ""
 
-#: ../options.php:477
+#: ../options.php:498
 msgid "Show featured image on Single post page"
 msgstr ""
 
-#: ../options.php:478
+#: ../options.php:499
 msgid "Show or hide featured image on Single post page"
 msgstr ""
 
-#: ../options.php:485
+#: ../options.php:506
 msgid "Enable Meta for blog posts?"
 msgstr ""
 
-#: ../options.php:486
+#: ../options.php:507
 msgid "Enable or Disable meta information for blog posts."
 msgstr ""
 
-#: ../options.php:492
+#: ../options.php:513
 msgid "Enable excerpt for blog posts?"
 msgstr ""
 
-#: ../options.php:493
+#: ../options.php:514
 msgid "Enable or Disable excerpt for blog posts."
 msgstr ""
 
-#: ../options.php:499
+#: ../options.php:520
 msgid "Enable read more button for blog posts?"
 msgstr ""
 
-#: ../options.php:500
+#: ../options.php:521
 msgid "Enable or Disable read more button for blog posts."
 msgstr ""
 
-#: ../options.php:506
+#: ../options.php:527
 msgid "'Read more' button text"
 msgstr ""
 
-#: ../options.php:507
+#: ../options.php:528
 msgid "Enter 'read more' button text."
 msgstr ""
 
-#: ../options.php:509
+#: ../options.php:530
 msgid "Read More"
 msgstr ""
 
-#: ../options.php:513
+#: ../options.php:534
 msgid "Show author bio on single post page?"
 msgstr ""
 
-#: ../options.php:514
+#: ../options.php:535
 msgid "Show or hide author bio on single post page."
 msgstr ""
 
-#: ../options.php:521
+#: ../options.php:542
 msgid "Related Posts Title"
 msgstr ""
 
-#: ../options.php:522
+#: ../options.php:543
 msgid "Enter Your Title used on Single Post page for related posts."
 msgstr ""
 
-#: ../options.php:524
+#: ../options.php:545
 msgid "Related posts"
 msgstr ""
 
-#: ../options.php:528 ../options.php:1263
+#: ../options.php:548 ../options.php:1314
+msgid "Portfolio"
+msgstr ""
+
+#: ../options.php:551
+msgid "Posts per page"
+msgstr ""
+
+#: ../options.php:552
+msgid "Enter number of post per page on portfolio page template"
+msgstr ""
+
+#: ../options.php:558
+msgid "Show thumbnail"
+msgstr ""
+
+#: ../options.php:559
+msgid "Show or hide post thumbnail on portfolio pages."
+msgstr ""
+
+#: ../options.php:565
+msgid "Show title"
+msgstr ""
+
+#: ../options.php:566
+msgid "Show or hide post title on portfolio pages."
+msgstr ""
+
+#: ../options.php:572
+msgid "Show excerpt"
+msgstr ""
+
+#: ../options.php:573
+msgid "Show or hide post excerpt on portfolio pages."
+msgstr ""
+
+#: ../options.php:579
+msgid "Show 'Read more' link"
+msgstr ""
+
+#: ../options.php:580
+msgid "Show or hide 'Read more' on portfolio pages."
+msgstr ""
+
+#: ../options.php:586 ../options.php:1392
 msgid "Footer"
 msgstr ""
 
-#: ../options.php:531
+#: ../options.php:589
 msgid "Footer copyright text"
 msgstr ""
 
-#: ../options.php:532
+#: ../options.php:590
 msgid "Enter text used in the right side of the footer. HTML tags are allowed."
 msgstr ""
 
-#: ../options.php:537
-msgid "Google Analytics Code"
-msgstr ""
-
-#: ../options.php:538
-msgid ""
-"You can paste your Google Analytics or other tracking code in this box. This "
-"will be automatically added to the footer."
-msgstr ""
-
-#: ../options.php:543
+#: ../options.php:595
 msgid "Display Footer menu?"
 msgstr ""
 
-#: ../options.php:544
+#: ../options.php:596
 msgid "Do you want to display footer menu?"
 msgstr ""
 
@@ -749,6 +826,18 @@ msgstr ""
 #: ../inc/extras.php:66
 #, php-format
 msgid "Page %s"
+msgstr ""
+
+#: ../inc/extras.php:387
+msgid "Page Options"
+msgstr ""
+
+#: ../inc/extras.php:396
+msgid "Select columns number"
+msgstr ""
+
+#: ../inc/extras.php:416
+msgid "Select category to pull posts from"
 msgstr ""
 
 #: ../options/options-framework.php:66
@@ -903,6 +992,14 @@ msgstr ""
 #: ../post-formats/link.php:35 ../post-formats/quote.php:15
 #: ../post-formats/status.php:7 ../post-formats/video.php:26
 msgid "Continue reading"
+msgstr ""
+
+#: ../post-formats/aside.php:13 ../post-formats/audio.php:32
+#: ../post-formats/chat.php:27 ../post-formats/gallery.php:65
+#: ../post-formats/image.php:43 ../post-formats/link.php:41
+#: ../post-formats/quote.php:21 ../post-formats/standard.php:60
+#: ../post-formats/status.php:14 ../post-formats/video.php:36
+msgid "Tags: "
 msgstr ""
 
 #: ../post-formats/audio.php:7 ../post-formats/chat.php:7

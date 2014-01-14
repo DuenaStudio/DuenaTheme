@@ -2,7 +2,7 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('post__holder'); ?>>	
 	<?php $stickyclass = 'sticky'; ?>		
 	<header class="post-header <?php if( is_singular() && is_sticky() ) echo esc_attr( $stickyclass ); ?>">				
-		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='icon-pushpin'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
+		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fa fa-thumb-tack'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
 		<?php if(!is_singular()) : ?>		
 			<h3 class="post-title"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><?php the_title(); ?></a></h3>
 		<?php else :?>				
@@ -29,7 +29,7 @@
 	</div>
 	<?php if( ( has_tag() ) && ( is_singular() ) ) { ?>
 		<footer class="post-footer">
-			<i class="icon-tags"></i> <?php the_tags('Tags: ', ' ', ''); ?>
+			<i class="fa fa-tags"></i> <?php the_tags(__( 'Tags: ', 'duena' ), ' ', ''); ?>
 		</footer>
 	<?php } ?>
 	<!--// Post Content -->

@@ -33,7 +33,7 @@
 	<!-- //Post Content -->
 	<?php if( ( has_tag() ) && ( is_singular() ) ) { ?>
 		<footer class="post-footer">
-			<i class="icon-tags"></i> <?php the_tags('Tags: ', ' ', ''); ?>
+			<i class="fa fa-tags"></i> <?php the_tags(__( 'Tags: ', 'duena' ), ' ', ''); ?>
 		</footer>
 	<?php } ?>
 	<?php get_template_part('post-formats/post-meta'); ?>        

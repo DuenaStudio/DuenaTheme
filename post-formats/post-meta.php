@@ -9,8 +9,8 @@
 	?>
 	<div class="post_meta aside">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
-		<span class="post_comment"><i class="icon-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php
@@ -18,8 +18,8 @@
 	?>
 	<div class="post_meta chat">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
-		<span class="post_comment"><i class="icon-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php
@@ -28,9 +28,9 @@
 	<div class="post_meta link">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
 		<?php if ( !is_singular() ) { ?>
-		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="icon-link"></i><?php _e('Permalink', 'duena') ?></a></span>
+		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e('Permalink', 'duena') ?></a></span>
 		<?php } ?>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php
@@ -39,10 +39,10 @@
 	<div class="post_meta quote">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
 		<?php if ( !is_singular() ) { ?>
-		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="icon-link"></i><?php _e('Permalink', 'duena') ?></a></span>
+		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e('Permalink', 'duena') ?></a></span>
 		<?php } ?>
-		<span class="post_comment"><i class="icon-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php
@@ -51,10 +51,10 @@
 	<div class="post_meta status">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
 		<?php if ( !is_singular() ) { ?>
-		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="icon-link"></i><?php _e('Permalink', 'duena') ?></a></span>
+		<span class="post_permalink"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e('Permalink to:', 'duena');?> <?php the_title(); ?>"><i class="fa fa-link"></i><?php _e('Permalink', 'duena') ?></a></span>
 		<?php } ?>
-		<span class="post_comment"><i class="icon-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php 	
@@ -62,8 +62,8 @@
 	?>
 	<div class="post_meta default">
 		<?php if ( get_the_category() ) {?><span class="post_category"><?php the_category(' ') ?></span><?php } ?>
-		<span class="post_comment"><i class="icon-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
-		<span class="post_author"><i class="icon-user"></i><?php the_author_posts_link() ?></span>
+		<span class="post_comment"><i class="fa fa-comments"></i><?php comments_popup_link('No comments', '1 comment', '% comments', 'comments-link', 'Comments are closed'); ?></span>
+		<span class="post_author"><i class="fa fa-user"></i><?php the_author_posts_link() ?></span>
 		<div class="clear"></div>
 	</div>
 	<?php } ?>

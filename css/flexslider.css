@@ -19,9 +19,28 @@
 .flex-control-nav,
 .flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
 
+.gallery_slider,
+.gallery_slider *,
+.flexslider,
+.flexslider * {
+	-webkit-box-sizing: content-box;
+  	-moz-box-sizing: content-box;
+  	box-sizing: content-box;
+}
+.gallery_slider img,
+.flexslider img {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+}
+
 /* FlexSlider Necessary Styles
 *********************************/ 
-.flexslider, .gallery_slider {margin: 0; padding: 0;}
+.page-wrapper .flexslider, 
+.page-wrapper .gallery_slider {
+	margin: 0;
+	padding: 0;
+}
 .flexslider .slides > li,
 .gallery_slider .slides > li {
 	display: none; 
@@ -73,8 +92,14 @@
 }
 
 /* Hide the slides before the JS is loaded. Avoids image jumping */
-.flexslider .slides img {width: 100%; display: block;}
-.gallery_slider .slides img {width: 100%; display: block;}
+.flexslider .slides img {
+	width: 100%; 
+	display: block;
+}
+.gallery_slider .slides img {
+	width: 100%; 
+	display: block;
+}
 .flex-pauseplay span {text-transform: capitalize;}
 
 /* Clearfix for the .slides element */
@@ -106,7 +131,12 @@ html[xmlns] .slides {display: block;}
 		width: 100%;
 		overflow: visible !important;
 	}
-.flex-viewport {max-height: 2000px; -webkit-transition: all 1s ease; -moz-transition: all 1s ease; transition: all 1s ease;}
+.flex-viewport {
+	max-height: 2000px; 
+	-webkit-transition: all 1s ease; 
+	-moz-transition: all 1s ease; 
+	transition: all 1s ease;
+}
 .loading .flex-viewport {max-height: 300px;}
 .flexslider .slides {
 	zoom: 1;

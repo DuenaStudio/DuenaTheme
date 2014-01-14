@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="span8 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
+	<div id="primary" class="col-md-8 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
 		<div id="content" class="site-content" role="main">
 
 		<?php while (have_posts()) : the_post(); 			

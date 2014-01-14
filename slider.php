@@ -6,11 +6,16 @@
         } else { 
             $sl_num = 4;
         }
+
         $sl_args = array(
-            'posts_per_page' => $sl_num,
-            'category_name' => esc_attr(of_get_option('sl_category')),
+            'posts_per_page'      => $sl_num,
             'ignore_sticky_posts' => 1
         );
+        $sl_category = of_get_option( 'sl_category', 'from_all' );
+
+        if ( 'from_all' != $sl_category ) {
+            $sl_args['cat'] = intval( $sl_category );
+        }
         $slider_query = new WP_Query( $sl_args );
         $checkthumb = 0;
         while ( $slider_query->have_posts() ) : $slider_query->the_post();

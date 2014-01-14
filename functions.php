@@ -127,10 +127,12 @@ function duena_setup() {
 
 	if ( function_exists( 'add_theme_support' ) ) { // Added in 2.9
 		add_theme_support( 'post-thumbnails' );
-		set_post_thumbnail_size( 770, 295, true ); // Normal post thumbnails
-		add_image_size( 'slider-post-thumbnail', 1170, 450, true ); // Slider Thumbnail
-		add_image_size( 'image_post_format', 770, 450, true ); // Image Post Format output
+		set_post_thumbnail_size( 750, 290, true ); // Normal post thumbnails
+		add_image_size( 'slider-post-thumbnail', 1140, 440, true ); // Slider Thumbnail
+		add_image_size( 'image_post_format', 750, 440, true ); // Image Post Format output
 		add_image_size( 'related-thumb', 160, 160, true ); // Realted Post Image output
+		add_image_size( 'portfolio-large-th', 550, 210, true ); // 2 cols portfolio image
+		add_image_size( 'portfolio-small-th', 265, 100, true ); // 4 cols portfolio image
 	}
 
 }
@@ -161,25 +163,31 @@ add_action( 'widgets_init', 'duena_widgets_init' );
  */
 function duena_styles() {
 	global $wp_styles;
-	
-	// Main stylesheet
-	wp_enqueue_style( 'duena-style', get_stylesheet_uri() );
 
 	// Bootstrap styles
 	wp_register_style( 'duena-bootstrap', get_template_directory_uri() . '/bootstrap/css/bootstrap.css');
-	wp_register_style( 'duena-responsive', get_template_directory_uri() . '/bootstrap/css/responsive.css');
-	wp_enqueue_style('duena-bootstrap');
-	wp_enqueue_style('duena-responsive');
+	wp_enqueue_style( 'duena-bootstrap' );
 
 	// Slider styles
 	wp_register_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css');
-	wp_enqueue_style('flexslider');
+	wp_enqueue_style( 'flexslider' );
 
 	// Popup styles
 	wp_register_style( 'magnific', get_template_directory_uri() . '/css/magnific-popup.css');
-	wp_enqueue_style('magnific');
+	wp_enqueue_style( 'magnific' );
 
-	// Loads the Internet Explorer specific stylesheet.
+	// FontAwesome stylesheet
+	wp_register_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', '', '4.0.3');
+	wp_enqueue_style( 'font-awesome' );
+
+	// Main stylesheet
+	wp_enqueue_style( 'duena-style', get_stylesheet_uri() );
+
+	// Add inline styles from theme options
+	$duena_user_css = duena_get_user_colors();
+    wp_add_inline_style( 'duena-style', $duena_user_css );
+
+    // Loads the Internet Explorer specific stylesheet.
 	wp_enqueue_style( 'duena_ie', get_template_directory_uri() . '/css/ie.css' );
 	$wp_styles->add_data( 'duena_ie', 'conditional', 'lt IE 9' );
 
@@ -217,9 +225,23 @@ function duena_scripts() {
 	wp_enqueue_script('custom', get_template_directory_uri() . '/js/custom.js', array('jquery'), '1.0', true);
 
 }
-add_action( 'wp_enqueue_scripts', 'duena_scripts', 10, 1 );
-add_action( 'wp_enqueue_scripts', 'duena_styles', 10, 1 );
+add_action( 'wp_enqueue_scripts', 'duena_scripts', 10 );
+add_action( 'wp_enqueue_scripts', 'duena_styles', 10 );
 
+
+/**
+ * Include additional assests for admin area
+ */
+function duena_admin_assets() {
+	$screen = get_current_screen();
+	if ( isset( $screen ) && 'page' == $screen->post_type ) {
+		// scripts
+		wp_enqueue_script( 'duena-admin-script', get_template_directory_uri() . '/js/admin-scripts.js', array('jquery'), '1.0', true );
+		// styles
+		wp_enqueue_style( 'duena-admin-style', get_template_directory_uri() . '/css/admin-style.css', '', '1.0' );
+	}
+}
+add_action( 'admin_enqueue_scripts', 'duena_admin_assets' );
 
 /**
  * Adding class 'active' to current menu item
@@ -399,19 +421,19 @@ function duena_show_author_bio() {
 		<div class="social_box">
 	<?php
 		if ( '' != of_get_option('g_author_bio_social_twitter') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='icon-twitter'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_twitter') )."'><i class='fa fa-twitter'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_facebook') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='icon-facebook'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_facebook') )."'><i class='fa fa-facebook'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_google') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_google') )."'><i class='icon-google-plus'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_google') )."'><i class='fa fa-google-plus'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_linked') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='icon-linkedin'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_linked') )."'><i class='fa fa-linkedin'></i></a>\n";
 		}
 		if ( '' != of_get_option('g_author_bio_social_rss') ) {
-			echo "<a href='".esc_url( of_get_option('g_author_bio_social_rss') )."'><i class='icon-rss'></i></a>\n";
+			echo "<a href='".esc_url( of_get_option('g_author_bio_social_rss') )."'><i class='fa fa-rss'></i></a>\n";
 		}
 	?>
 		</div>
@@ -442,45 +464,54 @@ function duena_show_author_bio() {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	Pagination
+/*	Pagination (based on Twenty Fourteen pagination function)
 /*-----------------------------------------------------------------------------------*/
-function duena_pagination($pages = '', $range = 1)
-{ 
-     $showitems = ($range * 2)+2; 
- 
-     global $paged;
-     if(empty($paged)) $paged = 1;
- 
-     if($pages == '')
-     {
-         global $wp_query;
-         $pages = $wp_query->max_num_pages;
-         if(!$pages)
-         {
-             $pages = 1;
-         }
-     }  
-     if(1 != $pages)
-     {
+function duena_pagination() { 
 
-     	echo "<div class='page_nav_wrap'>";
-         echo "<div class=\"post_nav\">";
-         if($paged > 2 && $paged > $range+1 && $showitems < $pages) echo "<span class='first more_link'><a href='".get_pagenum_link(1)."'>First</a></span>";
-         if($paged > 1 && $showitems < $pages) echo "<span class='prev more_link'><a href='".get_pagenum_link($paged - 1)."'>Prev</a></span>";
- 		 echo "<ul>";
-         for ($i=1; $i <= $pages; $i++)
-         {
-             if (1 != $pages &&( !($i >= $paged+$range+2 || $i <= $paged-$range-2) || $pages <= $showitems ))
-             {
-                 echo ($paged == $i)? "<li class=\"active\"><a href=''>".$i."</a></li>":"<li><a href='".get_pagenum_link($i)."' class=\"inactive\">".$i."</a></li>";
-             }
-         }
- 		echo "</ul>";
-         if ($paged < $pages && $showitems < $pages) echo "<span class='next more_link'><a href=\"".get_pagenum_link($paged + 1)."\">Next</a></span>"; 
-         if ($paged < $pages-1 &&  $paged+$range-1 < $pages && $showitems < $pages) echo "<span class='last more_link'><a href='".get_pagenum_link($pages)."'>Last</a></span>";
-         echo "</div>\n";
-        echo "</div>\n";
-     }
+	global $wp_query, $wp_rewrite;
+    
+	if ( $wp_query->max_num_pages < 2 ) {
+		return;
+	}
+
+	$paged        = get_query_var( 'paged' ) ? intval( get_query_var( 'paged' ) ) : 1;
+	$pagenum_link = html_entity_decode( get_pagenum_link() );
+	$query_args   = array();
+	$url_parts    = explode( '?', $pagenum_link );
+
+	if ( isset( $url_parts[1] ) ) {
+		wp_parse_str( $url_parts[1], $query_args );
+	}
+
+	$pagenum_link = remove_query_arg( array_keys( $query_args ), $pagenum_link );
+	$pagenum_link = trailingslashit( $pagenum_link ) . '%_%';
+
+	$format  = $wp_rewrite->using_index_permalinks() && ! strpos( $pagenum_link, 'index.php' ) ? 'index.php/' : '';
+	$format .= $wp_rewrite->using_permalinks() ? user_trailingslashit( 'page/%#%', 'paged' ) : '?paged=%#%';
+
+	// Set up paginated links.
+	$links = paginate_links( array(
+		'base'      => $pagenum_link,
+		'format'    => $format,
+		'total'     => $wp_query->max_num_pages,
+		'current'   => $paged,
+		'mid_size'  => 1,
+		'add_args'  => array_map( 'urlencode', $query_args ),
+		'prev_text' => __( '&larr; Previous', 'duena' ),
+		'next_text' => __( 'Next &rarr;', 'duena' ),
+		'type'      => 'list'
+	) );
+
+	if ( $links ) {
+
+	?>
+	<div class="page_nav_wrap">
+		<div class="post_nav">
+			<?php echo $links; ?>
+		</div><!-- .pagination -->
+	</div><!-- .navigation -->
+	<?php
+	}
 }
 
 /*-----------------------------------------------------------------------------------*/
@@ -594,15 +625,6 @@ if (!function_exists('duena_footer_js')) {
 		</script>
 		<!--<![endif]-->
 		<?php
-		if ( of_get_option('footer_ga') ) {
-			?>
-			<script type="text/javascript">
-			<?php
-				echo stripslashes( of_get_option('footer_ga') );
-			?>
-			</script>
-			<?php
-		}
 	}
 
 	add_action( 'wp_footer', 'duena_footer_js', 20, 1 );

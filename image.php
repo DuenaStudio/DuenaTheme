@@ -10,7 +10,7 @@ if ( ! isset( $content_width ) )
 	$content_width = 900; /* pixels */
 ?>
 
-	<div id="primary" class="span8 image-attachment <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
+	<div id="primary" class="col-md-8 image-attachment <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
 		<div id="content" class="site-content" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -7,7 +7,7 @@
  */
 
 get_header(); ?>
-	<div id="primary" class="span12">
+	<div id="primary" class="col-md-12">
 		<div id="content" class="site-content" role="main">
 
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>	

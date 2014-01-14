@@ -75,6 +75,7 @@
 
 .mfp-close {
   cursor: pointer;
+  background: none;
 }
 .mfp-close,
 .mfp-arrow,
@@ -118,13 +119,14 @@ button.mfp-close,
 button.mfp-arrow {
   overflow: visible;
   cursor: pointer !important;
-  background: transparent;
+  background: none !important;
   border: 0;
   -webkit-appearance: none;
   display: block;
   padding: 0;
   box-shadow: none !important;
-  z-index: 506; }
+  z-index: 506;
+}
 
 button::-moz-focus-inner {
   padding: 0;

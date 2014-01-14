@@ -13,7 +13,7 @@
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="container">
-			<div class="site-info">
+			<div class="site-info col-md-12">
 				<div class="footer-text">
 					<?php 
 					$footer_text = esc_attr(of_get_option('footer_text'));
@@ -34,7 +34,7 @@
 				}
 				?>
 				<div class="clear"></div>
-				<div id="toTop"><i class="icon-chevron-up"></i></div>
+				<div id="toTop"><i class="fa fa-chevron-up"></i></div>
 			</div>
 		</div>
 	</footer><!-- #colophon -->

@@ -1,10 +1,10 @@
 /*
 Theme Name: Duena
-Theme URI: 
+Theme URI: http://www.cherryframework.com/free-themes/duena-free-wordpress-theme/
 Author: Duena Studio
 Author URI: http://profiles.wordpress.org/duena_studio
 Description: Duena is a Bootstrap template designed specifically for personal blogs. Being Bootstrap-powered the template provides lots of opportunities for editing and tuning. Bootstrap is web developer's 'mana' with all those HTML elements, components and other cool stuff. Even though Bootstrap templates are mostly flat, the gradient on the background creates depth effect that makes content blocks float in the air. Red and its hues prevail in the theme design giving it some warmth and passion. There is no need to describe theme's responsiveness; for sure the template fits perfectly into all browsers of tablets, phones and PCs. And lastly, the template comes stuffed with lots of amazing features that will make your blog stand out. Feel free to try Duena template! 
-Version: 1.1.0
+Version: 2.0.0
 License: GNU General Public License v3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Tags: black, purple, red, one-column, two-columns, right-sidebar, flexible-width, custom-background, custom-menu, editor-style, featured-images, full-width-template, post-formats, theme-options, sticky-post, translation-ready, photoblogging
@@ -29,10 +29,10 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #8B8686;
   font-family: sans-serif;
-  font-size: 13px;
-  line-height: 19px;
+  font-size: 12px;
+  line-height: 20px;
 }
 /* Headings */
 h1,
@@ -54,7 +54,7 @@ ul {
 }
 ul li {
   padding: 0 0 10px 16px;
-  background: url(images/more-link-marker.gif) no-repeat 0 8px;
+  background: url(images/list-bullet.gif) no-repeat 0 0;
   list-style: none;
   margin: 0;
 }
@@ -107,8 +107,7 @@ margin-bottom:10px;
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
   .page-wrapper:before {
-    left: -20px;
-    right: -20px;
+    display: none;
   }
 }
 /* =HEADER
@@ -211,7 +210,7 @@ margin-bottom:10px;
   vertical-align: top;
   margin: 0;
   padding: 6px 35px 6px 15px;
-  height: 21px;
+  height: 33px;
   background: #ffffff;
   border-radius: 16px;
   border: none;
@@ -277,6 +276,9 @@ margin-bottom:10px;
 .main-nav .navbar_inner {
   background: #262626;
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.33);
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
 }
 .main-nav .navbar_inner :after {
   clear: both;
@@ -322,6 +324,9 @@ margin-bottom:10px;
   background: none;
   text-transform: none;
   font-weight: normal;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
 }
 .navbar_inner > div > ul > li,
 .navbar_inner > ul > li {
@@ -348,6 +353,9 @@ margin-bottom:10px;
 .navbar_inner > ul a {
   display: block;
   position: relative;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
 }
 .navbar_inner > div > ul li:hover ul,
 .navbar_inner > div > ul li.sfHover ul,
@@ -383,15 +391,6 @@ margin-bottom:10px;
 
   top: -10px;
 }
-.navbar_inner > div > ul li li:hover > ul,
-.navbar_inner > div > ul li li.sfHover > ul,
-.navbar_inner > ul li li:hover > ul,
-.navbar_inner > ul li li.sfHover > ul {
-  left: 101%;
-  /* match ul width */
-
-  top: -10px !important;
-}
 .navbar_inner > div > ul li li:hover li ul,
 .navbar_inner > div > ul li li.sfHover li ul,
 .navbar_inner > ul li li:hover li ul,
@@ -403,6 +402,9 @@ margin-bottom:10px;
 .navbar_inner > ul {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing:content-box;
+  -moz-box-sizing:content-box;
+  box-sizing:content-box;
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {
@@ -497,7 +499,7 @@ margin-bottom:10px;
   text-align: center;
   text-transform: uppercase;
   display: block;
-  background: #ff5b5b;
+  background: rgba(0,0,0,0);
 }
 .navbar_inner > div > ul li li > a:hover,
 .navbar_inner > div > ul li li.sfHover > a,
@@ -508,7 +510,7 @@ margin-bottom:10px;
 .navbar_inner > ul li li > a:focus,
 .navbar_inner > ul li li.current-menu-item > a {
   color: #fff8ed;
-  background: #db5455;
+  background: rgba(0,0,0,.2);
   outline: 0;
 }
 /*** arrows **/
@@ -922,13 +924,20 @@ margin-bottom:10px;
   font-size: 14px;
   text-decoration: underline;
   display: inline-block;
-  padding: 0 8px 0 0;
-  background: url(images/more-link-marker.gif) no-repeat right center;
+  padding: 0;
   font-style: italic;
+}
+.more_link:after {
+  font-family: FontAwesome;
+  content: "\f105";
+  font-style: normal;
+  font-size: 9px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 0 0 5px;
 }
 .more_link:hover {
   text-decoration: none;
-  color: #ff5b5b;
 }
 .byline {
   display: none;
@@ -1001,6 +1010,9 @@ margin-bottom:10px;
 }
 .single .featured-thumbnail {
   margin: 0 -20px 10px -20px;
+}
+.fullwidth-page .featured-thumbnail {
+  margin: -20px -20px 10px -20px;
 }
 .featured-thumbnail.large {
   float: none;
@@ -1515,30 +1527,27 @@ margin-bottom:10px;
   font-size: 20px;
   list-style: 20px;
 }
-.page_nav_wrap .post_nav ul li a {
+.page_nav_wrap .post_nav ul li a,
+.page_nav_wrap .post_nav ul li span {
   font-family: 'BenchNine', sans-serif;
   font-weight: bold;
   color: #434242;
+  text-decoration: none;
 }
 .page_nav_wrap .post_nav ul li a:hover {
   color: #ff5b5b;
   text-decoration: none;
 }
-.page_nav_wrap .post_nav ul li.active a {
+.page_nav_wrap .post_nav ul li .current {
   color: #ff5b5b;
   text-decoration: none;
+  cursor: default;
 }
-.page_nav_wrap .post_nav span {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 4px;
-}
+
 .page_nav_wrap .post_nav span a {
   text-decoration: underline;
 }
-.page_nav_wrap .post_nav span a:hover {
-  text-decoration: none;
-}
+
 .single-post-nav {
   background: #ffffff;
   padding: 0;
@@ -1580,12 +1589,23 @@ margin-bottom:10px;
 .portf_item .post_content {
 padding:10px 20px 20px;
 }
-.portf_item .featured-thumbnail {
+.portf_item.col-md-6 .featured-thumbnail {
+  max-height: 210px;
+}
+.portf_item.col-md-4 .featured-thumbnail {
   max-height: 142px;
+}
+.portf_item.col-md-3 .featured-thumbnail {
+  max-height: 100px;
 }
 .portf_item h5 {
   margin: 0 0 10px 0;
-line-height:28px;
+  line-height:26px;
+  font-size: 22px;
+  letter-spacing: 0;
+}
+.portf_item h5 a {
+  text-decoration: none;
 }
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) { 
@@ -1612,7 +1632,7 @@ line-height:28px;
 }
 .author_bio_sidebar .social_box a {
   color: #ff5b5b;
-  font-size: 30px;
+  font-size: 26px;
   height: 42px;
   line-height: 40px;
   width: 42px;
@@ -1806,6 +1826,9 @@ a.lightbox_img {
   -moz-transition:none;
   -o-transition:none;
   transition:none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 a .hover_overlay {
   content: "";
@@ -1824,7 +1847,7 @@ a:hover .hover_overlay {
 }
 a.lightbox_img img {
 }
-a .hover_overlay .icon-zoom-in {
+a .hover_overlay .fa-search-plus {
   color: #fff;
   font-size: 800px;
   text-align: center;
@@ -1832,7 +1855,7 @@ a .hover_overlay .icon-zoom-in {
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: 10px 0 0 -300px;
+  margin: -200px 0 0 -300px;
   display: inline-block;
   opacity: 0;
   filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
@@ -1840,7 +1863,7 @@ a .hover_overlay .icon-zoom-in {
   width: auto !important;
 
 }
-a:hover .hover_overlay .icon-zoom-in {
+a:hover .hover_overlay .fa-search-plus {
   filter:progid:DXImageTransform.Microsoft.Alpha(opacity=60);
 }
 
@@ -1858,6 +1881,10 @@ a:hover .hover_overlay .icon-zoom-in {
   margin: 0 4px 4px 0;
   overflow: hidden;
   position: relative;
+}
+.gallery-item img {
+  height: auto;
+  max-width: 100%;
 }
 .single .gallery-columns-1.gallery-size-medium,
 .single .gallery-columns-1.gallery-size-thumbnail,
@@ -2024,6 +2051,7 @@ a:hover .hover_overlay .icon-zoom-in {
   padding: 5px 0;
   font-size: 30px;
   line-height: 32px;
+  font-family: 'BenchNine', sans-serif;
 }
 .format-quote blockquote p cite {
   display: block;
@@ -2180,7 +2208,7 @@ object {
   }
 }
 #commentform label {
-  margin: 0;
+  margin: 0 0 5px 0;
 }
 #commentform textarea,
 #commentform input[type='text'] {
@@ -2188,7 +2216,6 @@ object {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  height: auto;
 }
 #reply-title small {
   display: block;
@@ -2373,7 +2400,7 @@ object {
   display: none;
   width: 32px;
   height: 32px;
-  line-height: 28px;
+  line-height: 32px;
   border-radius: 16px;
   color: #ffffff;
   background: #ff5b5b;

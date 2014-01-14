@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="page404 span12">
+	<div id="primary" class="page404 col-md-12">
 		<div class="hentry">
 			<div class="error404-num">404</div>
 			<div>

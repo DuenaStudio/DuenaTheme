@@ -4,6 +4,10 @@
 	max-width:914px;
 	margin-bottom:0px !important;
 }
+.nav-tab-wrapper .nav-tab {
+	font-weight: normal;
+	font-size: 14px;
+}
 #optionsframework {
 	position:relative;
 	z-index: 0;
@@ -62,8 +66,9 @@
 	margin-bottom: 5px;
 }
 #optionsframework input.checkbox, #optionsframework input.of-radio {
-	width: 30px;
-	margin-top:2px;
+	width: auto;
+	margin-top:0;
+	margin-right: 5px;
 	float:left;
 	clear:both;
 }
@@ -224,8 +229,7 @@
 #optionsframework-submit {
 	padding: 7px 10px;
 	border-top: 1px solid #ECECEC;
-	background-color: #F1F1F1;
-    background-image: -moz-linear-gradient(center top , #F9F9F9, #ECECEC);
+	background-color: #fefefe;
 }
 #optionsframework .button-primary {
 	float:right;

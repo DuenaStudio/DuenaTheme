@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="span8 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
+	<div id="primary" class="col-md-8 <?php echo esc_attr( of_get_option('blog_sidebar_pos') ) ?>">
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -33,7 +33,7 @@ get_header(); ?>
 
 			<div class="author-info author-page">
 				<figure class="featured-thumbnail thumbnail">
-					<?php echo get_avatar( get_the_author_meta( 'user_email' ), 120, '' ,get_the_author_meta( 'nickname' ) ); ?>
+					<?php echo get_avatar( get_the_author_meta( 'user_email' ), 120, '', get_the_author_meta( 'nickname' ) ); ?>
 				</figure><!-- .author-avatar -->
 				<div class="author-description">
 					<p>
@@ -42,18 +42,7 @@ get_header(); ?>
 				</div><!-- .author-description -->
 			</div><!-- .author-info -->
 			<h2 class="page-title">
-				<?php
-					/* Queue the first post, that way we know
-					 * what author we're dealing with (if that is the case).
-					*/
-					the_post();
-					printf( __( 'Author Archives: %s', 'duena' ), get_the_author() );
-					/* Since we called the_post() above, we need to
-					 * rewind the loop back to the beginning that way
-					 * we can run the loop properly, in full.
-					 */
-
-				?>
+				<?php printf( __( 'Author Archives: %s', 'duena' ), get_the_author() );	?>
 			</h2>
 			<?php rewind_posts(); ?>
 			<?php /* Start the Loop */ ?>
@@ -61,7 +50,7 @@ get_header(); ?>
 
 				// The following determines what the post format is and shows the correct file accordingly
 				$format = get_post_format();
-				get_template_part( 'post-formats/'.$format );					
+				get_template_part( 'post-formats/' . $format );					
 				if($format == '')
 				get_template_part( 'post-formats/standard' );					
 			endwhile; ?>

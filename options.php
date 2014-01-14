@@ -163,6 +163,8 @@ if(!function_exists('optionsframework_options')) {
 				$options_categories[$category->cat_ID] = $category->cat_name;
 		}
 		
+		$all_cats_array = array('from_all' => __( 'Select from all', 'duena' ) ) + $options_categories;
+
 		// Pull all the pages into an array
 		$options_pages = array();  
 		$options_pages_obj = get_pages('sort_column=post_parent,menu_order');
@@ -180,86 +182,86 @@ if(!function_exists('optionsframework_options')) {
 							"type" => "heading");
 
 		$options['g_search_box_id'] = array( "name" => __( "Display search box?", "duena" ),
-							"desc" => __( "Display search box in the header?", "duena" ),
-							"id" => "g_search_box_id",
-							"type" => "radio",
-							"std" => "yes",
+							"desc"    => __( "Display search box in the header?", "duena" ),
+							"id"      => "g_search_box_id",
+							"type"    => "radio",
+							"std"     => "yes",
 							"options" => $g_search_box);
 		
 		$options['g_breadcrumbs_id'] = array( "name" => __( "Display breadcrumbs?", "duena" ),
-							"desc" => __( "Display breadcrumbs?", "duena" ),
-							"id" => "g_breadcrumbs_id",
-							"type" => "radio",
-							"std" => "yes",
+							"desc"    => __( "Display breadcrumbs?", "duena" ),
+							"id"      => "g_breadcrumbs_id",
+							"type"    => "radio",
+							"std"     => "yes",
 							"options" => $g_breadcrumb);
 
 		$options['g_portfolio_cat'] = array( "name" => __( "Category slug for portfolio page", "duena" ),
 							"desc" => __( "Enter category slug, from which you like to fill portfolio page", "duena" ),
-							"id" => "g_portfolio_cat",
+							"id"   => "g_portfolio_cat",
 							"type" => "text",
-							"std" => "");
+							"std"  => "");
 
 		$options['g_author_bio'] = array( "name" => __( "Display Author Bio in sidebar", "duena" ),
-							"desc" => __( "Show/hide author bio in sidebar", "duena" ),
-							"id" => "g_author_bio",
-							"type" => "radio",
-							"std" => "yes",
+							"desc"    => __( "Show/hide author bio in sidebar", "duena" ),
+							"id"      => "g_author_bio",
+							"type"    => "radio",
+							"std"     => "yes",
 							"options" => $g_search_box);
 
 		$options['g_author_bio_title'] = array( "name" => __( "Author Bio Title", "duena" ),
-							"desc" => __( "Enter Author Bio Title", "duena" ),
-							"id" => "g_author_bio_title",
-							"type" => "text",
+							"desc"  => __( "Enter Author Bio Title", "duena" ),
+							"id"    => "g_author_bio_title",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => __( "Welcome to my site", "duena" ));
+							"std"   => __( "Welcome to my site", "duena" ));
 
 		$options['g_author_bio_img'] = array( "name" => __( "Author Bio image", "duena" ),
-							"desc" => __( "Upload Author Bio image", "duena" ),
-							"id" => "g_author_bio_img",
+							"desc"  => __( "Upload Author Bio image", "duena" ),
+							"id"    => "g_author_bio_img",
 							"class" => "hidden",
-							"type" => "upload");
+							"type"  => "upload");
 
 		$options['g_author_bio_message'] = array( "name" => __( "Author Bio Message", "duena" ),
-							"desc" => __( "Enter Author Bio Message (HTML tags allowed)", "duena" ),
-							"id" => "g_author_bio_message",
-							"type" => "textarea",
+							"desc"  => __( "Enter Author Bio Message (HTML tags allowed)", "duena" ),
+							"id"    => "g_author_bio_message",
+							"type"  => "textarea",
 							"class" => "hidden",
-							"std" => __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena" ));
+							"std"   => __( "Hello, and welcome to my site! I hope you like the place and decide to stay.", "duena" ));
 
 		$options['g_author_bio_social_twitter'] = array( "name" => __( "Author Twitter URL", "duena" ),
-							"desc" => __( "Enter Author Twitter URL", "duena" ),
-							"id" => "g_author_bio_social_twitter",
-							"type" => "text",
+							"desc"  => __( "Enter Author Twitter URL", "duena" ),
+							"id"    => "g_author_bio_social_twitter",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => "#");
+							"std"   => "#");
 
 		$options['g_author_bio_social_facebook'] = array( "name" => __( "Author Facebook URL", "duena" ),
-							"desc" => __( "Enter Author Facebook URL", "duena" ),
-							"id" => "g_author_bio_social_facebook",
-							"type" => "text",
+							"desc"  => __( "Enter Author Facebook URL", "duena" ),
+							"id"    => "g_author_bio_social_facebook",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => "#");
+							"std"   => "#");
 
 		$options['g_author_bio_social_google'] = array( "name" => __( "Author Google+ URL", "duena" ),
-							"desc" => __( "Enter Author Google+ URL", "duena" ),
-							"id" => "g_author_bio_social_google",
-							"type" => "text",
+							"desc"  => __( "Enter Author Google+ URL", "duena" ),
+							"id"    => "g_author_bio_social_google",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => "#");
+							"std"   => "#");
 
 		$options['g_author_bio_social_linked'] = array( "name" => __( "Author LinkedIn URL", "duena" ),
-							"desc" => __( "Enter Author LinkedIn URL", "duena" ),
-							"id" => "g_author_bio_social_linked",
-							"type" => "text",
+							"desc"  => __( "Enter Author LinkedIn URL", "duena" ),
+							"id"    => "g_author_bio_social_linked",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => "#");
+							"std"   => "#");
 
 		$options['g_author_bio_social_rss'] = array( "name" => __( "Author RSS URL", "duena" ),
-							"desc" => __( "Enter Author RSS URL", "duena" ),
-							"id" => "g_author_bio_social_rss",
-							"type" => "text",
+							"desc"  => __( "Enter Author RSS URL", "duena" ),
+							"id"    => "g_author_bio_social_rss",
+							"type"  => "text",
 							"class" => "hidden",
-							"std" => "#");
+							"std"   => "#");
 		
 		
 		
@@ -268,116 +270,135 @@ if(!function_exists('optionsframework_options')) {
 							"type" => "heading");
 		
 		$options['logo_type'] = array( "name" => __( "What kind of logo?", "duena" ),
-							"desc" => __( "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead.", "duena" ),
-							"id" => "logo_type",
-							"std" => "text_logo",
-							"type" => "radio",
+							"desc"    => __( "Select whether you want your main logo to be an image or text. If you select 'image' you can put in the image url in the next option, and if you select 'text' your Site Title will show instead.", "duena" ),
+							"id"      => "logo_type",
+							"std"     => "text_logo",
+							"type"    => "radio",
 							"options" => $logo_type);
 		
 		$options['logo_url'] = array( "name" => __( "Logo Image Path", "duena" ),
 							"desc" => __( "Upload logo image", "duena" ),
-							"id" => "logo_url",
+							"id"   => "logo_url",
 							"type" => "upload");
 		
 		$options['favicon'] = array( "name" => __( "Favicon", "duena" ),
 							"desc" => __( "Click Upload or Enter the direct path to your favicon.", "duena" ),
-							"id" => "favicon",
-							"std" => "",
+							"id"   => "favicon",
+							"std"  => "",
 							"type" => "upload");
 		
+		$options[] = array( "name" => __( "Color scheme", "duena" ),
+							"type" => "heading");
+
+		$options['cs_primary_color'] = array( "name" => __( "Primary color", "duena" ),
+							"desc" => __( "Color of links, borders on content boxes, social icons, meta icons, post type labels", "duena" ),
+							"id"   => "cs_primary_color",
+							"std"  => "#FF5B5B",
+							"type" => "color");
+
+		$options['cs_secondary_color'] = array( "name" => __( "Secondary color", "duena" ),
+							"desc" => __( "Color of links hovers", "duena" ),
+							"id"   => "cs_secondary_color",
+							"std"  => "#71A08B",
+							"type" => "color");
+
+
+		$options['cs_list_bullet'] = array( "name" => __( "Default list bullet", "duena" ),
+							"desc" => __( "Upload image for list bullet (Note. Use small image for bullet, not larger than 10*10px, also reccomended to leave some empty space at image before bullet(5-8px))", "duena" ),
+							"id"   => "cs_list_bullet",
+							"type" => "upload");
+
+
 		$options[] = array( "name" => __( "Navigation", "duena" ),
 							"type" => "heading");
 		
 		$options['sf_delay'] = array( "name" => __( "Delay", "duena" ),
-							"desc" => __( "miliseconds delay on mouseout.", "duena" ),
-							"id" => "sf_delay",
-							"std" => "1000",
+							"desc"  => __( "miliseconds delay on mouseout.", "duena" ),
+							"id"    => "sf_delay",
+							"std"   => "1000",
 							"class" => "mini",
-							"type" => "text");
+							"type"  => "text");
 		
 		$options['sf_f_animation'] = array( "name" => __( "Fade-in animation", "duena" ),
-							"desc" => __( "Fade-in animation.", "duena" ),
-							"id" => "sf_f_animation",
-							"std" => "show",
-							"type" => "radio",
+							"desc"    => __( "Fade-in animation.", "duena" ),
+							"id"      => "sf_f_animation",
+							"std"     => "show",
+							"type"    => "radio",
 							"options" => $sf_f_animation_array);
 		
 		$options['sf_sl_animation'] = array( "name" => __( "Slide-down animation", "duena" ),
-							"desc" => __( "Slide-down animation.", "duena" ),
-							"id" => "sf_sl_animation",
-							"std" => "show",
-							"type" => "radio",
+							"desc"    => __( "Slide-down animation.", "duena" ),
+							"id"      => "sf_sl_animation",
+							"std"     => "show",
+							"type"    => "radio",
 							"options" => $sf_sl_animation_array);
 		
 		$options['sf_speed'] = array( "name" => __( "Speed", "duena" ),
-							"desc" => __( "Animation speed.", "duena" ),
-							"id" => "sf_speed",
-							"type" => "select",
-							"std" => "normal",
-							"class" => "tiny", //mini, tiny, small
+							"desc"    => __( "Animation speed.", "duena" ),
+							"id"      => "sf_speed",
+							"type"    => "select",
+							"std"     => "normal",
+							"class"   => "tiny", //mini, tiny, small
 							"options" => $sf_speed_array);
 		
 		$options['sf_arrows'] = array( "name" => __( "Arrows markup", "duena" ),
-							"desc" => __( "Do you want to generate arrow mark-up?", "duena" ),
-							"id" => "sf_arrows",
-							"std" => "false",
-							"type" => "radio",
+							"desc"    => __( "Do you want to generate arrow mark-up?", "duena" ),
+							"id"      => "sf_arrows",
+							"std"     => "false",
+							"type"    => "radio",
 							"options" => $sf_arrows_array);
-		
-		
-
 
 
 		$options[] = array( "name" => __( "Slider (visualisation)", "duena" ),
 							"type" => "heading");
  
 		$options['sl_show'] = array( "name" => __( "Show slider", "duena" ),
-                            "desc" => __( "Show / Hide slider on home page", "duena" ),
-                            "id" => "sl_show",
-                            "std" => "yes",
-                            "type" => "radio",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_show_array);
+							"desc"    => __( "Show / Hide slider on home page", "duena" ),
+							"id"      => "sl_show",
+							"std"     => "yes",
+							"type"    => "radio",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_show_array);
 
         $options['sl_effect'] = array( "name" => __( "Sliding effect", "duena" ),
-                            "desc" => __( "Select your animation type", "duena" ),
-                            "id" => "sl_effect",
-                            "std" => "fade",
-                            "type" => "select",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_effect_array);
+							"desc"    => __( "Select your animation type", "duena" ),
+							"id"      => "sl_effect",
+							"std"     => "fade",
+							"type"    => "select",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_effect_array);
 
         $options['sl_direction'] = array( "name" => __( "Sliding direction", "duena" ),
-                            "desc" => __( "Select the sliding direction", "duena" ),
-                            "id" => "sl_direction",
-                            "std" => "horizontal",
-                            "type" => "select",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_direction_array);
+							"desc"    => __( "Select the sliding direction", "duena" ),
+							"id"      => "sl_direction",
+							"std"     => "horizontal",
+							"type"    => "select",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_direction_array);
 
         $options['sl_slideshow'] = array( "name" => __( "Slideshow", "duena" ),
-                            "desc" => __( "Animate slider automatically?", "duena" ),
-                            "id" => "sl_slideshow",
-                            "std" => "true",
-                            "type" => "radio",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_slideshow_array);
+							"desc"    => __( "Animate slider automatically?", "duena" ),
+							"id"      => "sl_slideshow",
+							"std"     => "true",
+							"type"    => "radio",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_slideshow_array);
 
         $options['sl_control'] = array( "name" => __( "Paging control", "duena" ),
-                            "desc" => __( "Create navigation for paging control of each slide?", "duena" ),
-                            "id" => "sl_control",
-                            "std" => "true",
-                            "type" => "radio",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_control_array);
+							"desc"    => __( "Create navigation for paging control of each slide?", "duena" ),
+							"id"      => "sl_control",
+							"std"     => "true",
+							"type"    => "radio",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_control_array);
 
         $options['sl_direction_nav'] = array( "name" => __( "Previous/Next navigation", "duena" ),
-                            "desc" => __( "Create controls for previous/next navigation?", "duena" ),
-                            "id" => "sl_direction_nav",
-                            "std" => "true",
-                            "type" => "radio",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_direction_nav_array);
+							"desc"    => __( "Create controls for previous/next navigation?", "duena" ),
+							"id"      => "sl_direction_nav",
+							"std"     => "true",
+							"type"    => "radio",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_direction_nav_array);
 
         
 
@@ -386,73 +407,73 @@ if(!function_exists('optionsframework_options')) {
 							"type" => "heading");
  
 		$options['sl_num'] = array( "name" => __( "How many slides to show?", "duena" ),
-                            "desc" => __( "This is how many slides will be displayed.", "duena" ),
-                            "id" => "sl_num",
-                            "std" => "4",
-                            "type" => "select",
-                            "class" => "tiny", //mini, tiny, small
-                            "options" => $sl_num_array);
+							"desc"    => __( "This is how many slides will be displayed.", "duena" ),
+							"id"      => "sl_num",
+							"std"     => "4",
+							"type"    => "select",
+							"class"   => "tiny", //mini, tiny, small
+							"options" => $sl_num_array);
 
 		$options['sl_category'] = array( "name" => __( "Which category to pull from?", "duena" ),
-                            "desc" => __( "Enter the slug of the category you'd like to pull slides from. Leave blank if you'd like to pull from all categories.", "duena" ),
-                            "id" => "sl_category",
-                            "std" => "",
-                            "type" => "text",
-                            "class" => "tiny");
+							"desc"    => __( "Select the category you'd like to pull slides from.", "duena" ),
+							"id"      => "sl_category",
+							"std"     => "",
+							"type"    => "select",
+							"options" => $all_cats_array);
 
 		$options['sl_as_link'] = array( "name" => __( "Slide as link to the post", "duena" ),
-                            "desc" => __( "Add/remove permalink to slides", "duena" ),
-                            "id" => "sl_as_link",
-                            "std" => "true",
-                            "type" => "radio",
-                            "class" => "tiny",
-                            "options" => $sl_as_link_array);
+							"desc"    => __( "Add/remove permalink to slides", "duena" ),
+							"id"      => "sl_as_link",
+							"std"     => "true",
+							"type"    => "radio",
+							"class"   => "tiny",
+							"options" => $sl_as_link_array);
 
 		$options['sl_caption'] = array( "name" => __( "Show/Hide slide caption", "duena" ),
-                            "desc" => __( "Show/Hide slide caption.", "duena" ),
-                            "id" => "sl_caption",
-                            "std" => "hide",
-                            "type" => "radio",
-                            "class" => "tiny",
-                            "options" => $sl_caption_array);
+							"desc"    => __( "Show/Hide slide caption.", "duena" ),
+							"id"      => "sl_caption",
+							"std"     => "hide",
+							"type"    => "radio",
+							"class"   => "tiny",
+							"options" => $sl_caption_array);
 
 		$options['sl_capt_title'] = array( "name" => __( "Show/Hide slide caption title", "duena" ),
-                            "desc" => __( "Show/Hide slide caption title.", "duena" ),
-                            "id" => "sl_capt_title",
-                            "std" => "show",
-                            "type" => "radio",
-                            "class" => "tiny hidden",
-                            "options" => $sl_capt_title_array);
+							"desc"    => __( "Show/Hide slide caption title.", "duena" ),
+							"id"      => "sl_capt_title",
+							"std"     => "show",
+							"type"    => "radio",
+							"class"   => "tiny hidden",
+							"options" => $sl_capt_title_array);
 
 		$options['sl_capt_exc'] = array( "name" => __( "Show/Hide slide caption excerpt", "duena" ),
-                            "desc" => __( "Show/Hide slide caption excerpt.", "duena" ),
-                            "id" => "sl_capt_exc",
-                            "std" => "show",
-                            "type" => "radio",
-                            "class" => "tiny hidden",
-                            "options" => $sl_capt_exc_array);
+							"desc"    => __( "Show/Hide slide caption excerpt.", "duena" ),
+							"id"      => "sl_capt_exc",
+							"std"     => "show",
+							"type"    => "radio",
+							"class"   => "tiny hidden",
+							"options" => $sl_capt_exc_array);
 
 		$options['sl_capt_exc_length'] = array( "name" => __( "Slide caption excerpt length", "duena" ),
-                            "desc" => __( "How many words are displayed in the excerpt?", "duena" ),
-                            "id" => "sl_capt_exc_length",
-                            "std" => "20",
-                            "type" => "text",
-                            "class" => "tiny hidden");
+							"desc"  => __( "How many words are displayed in the excerpt?", "duena" ),
+							"id"    => "sl_capt_exc_length",
+							"std"   => "20",
+							"type"  => "text",
+							"class" => "tiny hidden");
 
 		$options['sl_capt_btn'] = array( "name" => __( "Show/Hide slide caption button", "duena" ),
-                            "desc" => __( "Show/Hide slide caption button", "duena" ),
-                            "id" => "sl_capt_btn",
-                             "std" => "show",
-                            "type" => "radio",
-                            "class" => "tiny hidden",
-                            "options" => $sl_capt_btn_array);
+								"desc" => __( "Show/Hide slide caption button", "duena" ),
+								"id" => "sl_capt_btn",
+								"std" => "show",
+								"type" => "radio",
+								"class" => "tiny hidden",
+								"options" => $sl_capt_btn_array);
 
 		$options['sl_capt_btn_txt'] = array( "name" => __( "Slide caption button text", "duena" ),
-                            "desc" => __( "Slide caption button text", "duena" ),
-                            "id" => "sl_capt_btn_txt",
-                            "std" => __( 'Read more', 'duena' ),
-                            "type" => "text",
-                            "class" => "tiny hidden");
+							"desc"  => __( "Slide caption button text", "duena" ),
+							"id"    => "sl_capt_btn_txt",
+							"std"   => __( 'Read more', 'duena' ),
+							"type"  => "text",
+							"class" => "tiny hidden");
 
 
 		
@@ -460,91 +481,122 @@ if(!function_exists('optionsframework_options')) {
 							"type" => "heading");
 		
 		$options['blog_sidebar_pos'] = array( "name" => __( "Sidebar position", "duena" ),
-							"desc" => __( "Choose sidebar position.", "duena" ),
-							"id" => "blog_sidebar_pos",
-							"std" => "right",
-							"type" => "radio",
+							"desc"    => __( "Choose sidebar position.", "duena" ),
+							"id"      => "blog_sidebar_pos",
+							"std"     => "right",
+							"type"    => "radio",
 							"options" => $post_sidebar_array);
 		
 		$options['post_image_size'] = array( "name" => __( "Show featured image on Blog page", "duena" ),
-							"desc" => __( "Show or hide featured image on Blog page", "duena" ),
-							"id" => "post_image_size",
-							"type" => "select",
-							"std" => "normal",
-							"class" => "small", //mini, tiny, small
+							"desc"    => __( "Show or hide featured image on Blog page", "duena" ),
+							"id"      => "post_image_size",
+							"type"    => "select",
+							"std"     => "normal",
+							"class"   => "small", //mini, tiny, small
 							"options" => $post_image_array);
 		
 		$options['single_image_size'] = array( "name" => __( "Show featured image on Single post page", "duena" ),
-							"desc" => __( "Show or hide featured image on Single post page", "duena" ),
-							"id" => "single_image_size",
-							"type" => "select",
-							"std" => "normal",
-							"class" => "small", //mini, tiny, small
+							"desc"    => __( "Show or hide featured image on Single post page", "duena" ),
+							"id"      => "single_image_size",
+							"type"    => "select",
+							"std"     => "normal",
+							"class"   => "small", //mini, tiny, small
 							"options" => $single_image_array);
 		
 		$options['post_meta'] = array( "name" => __( "Enable Meta for blog posts?", "duena" ),
-							"desc" => __( "Enable or Disable meta information for blog posts.", "duena" ),
-							"id" => "post_meta",
-							"std" => "true",
-							"type" => "radio",
+							"desc"    => __( "Enable or Disable meta information for blog posts.", "duena" ),
+							"id"      => "post_meta",
+							"std"     => "true",
+							"type"    => "radio",
 							"options" => $post_opt_array);
 		
 		$options['post_excerpt'] = array( "name" => __( "Enable excerpt for blog posts?", "duena" ),
-							"desc" => __( "Enable or Disable excerpt for blog posts.", "duena" ),
-							"id" => "post_excerpt",
-							"std" => "true",
-							"type" => "radio",
+							"desc"    => __( "Enable or Disable excerpt for blog posts.", "duena" ),
+							"id"      => "post_excerpt",
+							"std"     => "true",
+							"type"    => "radio",
 							"options" => $post_opt_array);
 
 		$options['post_button'] = array( "name" => __( "Enable read more button for blog posts?", "duena" ),
-							"desc" => __( "Enable or Disable read more button for blog posts.", "duena" ),
-							"id" => "post_button",
-							"std" => "true",
-							"type" => "radio",
+							"desc"    => __( "Enable or Disable read more button for blog posts.", "duena" ),
+							"id"      => "post_button",
+							"std"     => "true",
+							"type"    => "radio",
 							"options" => $post_opt_array);
 
 		$options['post_button_txt'] = array( "name" => __( "'Read more' button text", "duena" ),
-                            "desc" => __( "Enter 'read more' button text.", "duena" ),
-                            "id" => "post_button_txt",
-                            "std" => __( "Read More", "duena" ),
-                            "type" => "text",
-                            "class" => "tiny");
+							"desc"  => __( "Enter 'read more' button text.", "duena" ),
+							"id"    => "post_button_txt",
+							"std"   => __( "Read More", "duena" ),
+							"type"  => "text",
+							"class" => "tiny");
 
 		$options['post_author'] = array( "name" => __( "Show author bio on single post page?", "duena" ),
-							"desc" => __( "Show or hide author bio on single post page.", "duena" ),
-							"id" => "post_author",
-							"std" => "true",
-							"type" => "radio",
+							"desc"    => __( "Show or hide author bio on single post page.", "duena" ),
+							"id"      => "post_author",
+							"std"     => "true",
+							"type"    => "radio",
 							"options" => $post_opt_array);
 		
 
 		$options['blog_related'] = array( "name" => __( "Related Posts Title", "duena" ),
 							"desc" => __( "Enter Your Title used on Single Post page for related posts.", "duena" ),
-							"id" => "blog_related",
-							"std" => __( 'Related posts', 'duena' ),
+							"id"   => "blog_related",
+							"std"  => __( 'Related posts', 'duena' ),
 							"type" => "text");
 		
-		
+		$options[] = array( "name" => __( "Portfolio", "duena" ),
+							"type" => "heading");
+
+		$options['portfolio_per_page'] = array( "name" => __( "Posts per page", "duena" ),
+							"desc"    => __( "Enter number of post per page on portfolio page template", "duena" ),
+							"id"      => "portfolio_per_page",
+							"type"    => "text",
+							"std"     => "12",
+							"class"   => "tiny");
+
+		$options['portfolio_show_thumbnail'] = array( "name" => __( "Show thumbnail", "duena" ),
+							"desc"    => __( "Show or hide post thumbnail on portfolio pages.", "duena" ),
+							"id"      => "portfolio_show_thumbnail",
+							"std"     => "true",
+							"type"    => "radio",
+							"options" => $post_opt_array);
+
+		$options['portfolio_show_title'] = array( "name" => __( "Show title", "duena" ),
+							"desc"    => __( "Show or hide post title on portfolio pages.", "duena" ),
+							"id"      => "portfolio_show_title",
+							"std"     => "true",
+							"type"    => "radio",
+							"options" => $post_opt_array);
+
+		$options['portfolio_show_excerpt'] = array( "name" => __( "Show excerpt", "duena" ),
+							"desc"    => __( "Show or hide post excerpt on portfolio pages.", "duena" ),
+							"id"      => "portfolio_show_excerpt",
+							"std"     => "true",
+							"type"    => "radio",
+							"options" => $post_opt_array);
+
+		$options['portfolio_show_link'] = array( "name" => __( "Show 'Read more' link", "duena" ),
+							"desc"    => __( "Show or hide 'Read more' on portfolio pages.", "duena" ),
+							"id"      => "portfolio_show_link",
+							"std"     => "true",
+							"type"    => "radio",
+							"options" => $post_opt_array);
+
 		$options[] = array( "name" => __( "Footer", "duena" ),
 							"type" => "heading");
 		
 		$options['footer_text'] = array( "name" => __( "Footer copyright text", "duena" ),
 							"desc" => __( "Enter text used in the right side of the footer. HTML tags are allowed.", "duena" ),
-							"id" => "footer_text",
-							"std" => "",
-							"type" => "textarea");
-
-		$options['footer_ga'] = array( "name" => __( "Google Analytics Code", "duena" ),
-							"desc" => __( "You can paste your Google Analytics or other tracking code in this box. This will be automatically added to the footer.", "duena" ),
-							"id" => "footer_ga",
-							"std" => "",
+							"id"   => "footer_text",
+							"std"  => "",
 							"type" => "textarea");
 		
 		$options['footer_menu'] = array( "name" => __( "Display Footer menu?", "duena" ),
-							"desc" => __( "Do you want to display footer menu?", "duena" ),
-							"id" => "footer_menu",
-							"std" => "false",
-							"type" => "radio",
+							"desc"    => __( "Do you want to display footer menu?", "duena" ),
+							"id"      => "footer_menu",
+							"std"     => "false",
+							"type"    => "radio",
 							"options" => $footer_menu_array);
 					
 		
@@ -1252,16 +1304,93 @@ if(!function_exists('duena_register')) {
 				'type' => $options['blog_related']['type'],
 				'priority' => 20
 		) );
+
+		/*-----------------------------------------------------------------------------------*/
+		/*	Portfolio
+		/*-----------------------------------------------------------------------------------*/
 		
 		
-		
+		$wp_customize->add_section( 'duena_portfolio', array(
+				'title' => __( 'Portfolio', 'duena' ),
+				'priority' => 205
+		) );
+
+		/* Per page */
+		$wp_customize->add_setting( 'duena[portfolio_per_page]', array(
+				'default' => $options['portfolio_per_page']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'duena_portfolio_per_page', array(
+				'label' => $options['portfolio_per_page']['name'],
+				'section' => 'duena_portfolio',
+				'settings' => 'duena[portfolio_per_page]',
+				'type' => $options['portfolio_per_page']['type'],
+				'priority' => 11
+		) );
+
+		/* Thumb */
+		$wp_customize->add_setting( 'duena[portfolio_show_thumbnail]', array(
+				'default' => $options['portfolio_show_thumbnail']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'portfolio_show_thumbnail', array(
+				'label' => $options['portfolio_show_thumbnail']['name'],
+				'section' => 'duena_portfolio',
+				'settings' => 'duena[portfolio_show_thumbnail]',
+				'type' => $options['portfolio_show_thumbnail']['type'],
+				'choices' => $options['portfolio_show_thumbnail']['options'],
+				'priority' => 12
+		) );
+
+		/* Title */
+		$wp_customize->add_setting( 'duena[portfolio_show_title]', array(
+				'default' => $options['portfolio_show_title']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'portfolio_show_title', array(
+				'label' => $options['portfolio_show_title']['name'],
+				'section' => 'duena_portfolio',
+				'settings' => 'duena[portfolio_show_title]',
+				'type' => $options['portfolio_show_title']['type'],
+				'choices' => $options['portfolio_show_title']['options'],
+				'priority' => 13
+		) );
+
+		/* Excerpt */
+		$wp_customize->add_setting( 'duena[portfolio_show_excerpt]', array(
+				'default' => $options['portfolio_show_excerpt']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'portfolio_show_excerpt', array(
+				'label' => $options['portfolio_show_excerpt']['name'],
+				'section' => 'duena_portfolio',
+				'settings' => 'duena[portfolio_show_excerpt]',
+				'type' => $options['portfolio_show_excerpt']['type'],
+				'choices' => $options['portfolio_show_excerpt']['options'],
+				'priority' => 14
+		) );
+
+		/* Link */
+		$wp_customize->add_setting( 'duena[portfolio_show_link]', array(
+				'default' => $options['portfolio_show_link']['std'],
+				'type' => 'option'
+		) );
+		$wp_customize->add_control( 'portfolio_show_link', array(
+				'label' => $options['portfolio_show_link']['name'],
+				'section' => 'duena_portfolio',
+				'settings' => 'duena[portfolio_show_link]',
+				'type' => $options['portfolio_show_link']['type'],
+				'choices' => $options['portfolio_show_link']['options'],
+				'priority' => 15
+		) );
+
 		/*-----------------------------------------------------------------------------------*/
 		/*	Footer
 		/*-----------------------------------------------------------------------------------*/
 		
 		$wp_customize->add_section( 'duena_footer', array(
 			'title' => __( 'Footer', 'duena' ),
-			'priority' => 205
+			'priority' => 206
 		) );
 			
 		/* Footer Copyright Text */

@@ -8,7 +8,7 @@
 	endif; ?>
 	<header class="post-header <?php if( is_singular() && is_sticky() ) echo esc_attr( $stickyclass ); ?>">
 
-		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='icon-pushpin'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
+		<?php if ( is_sticky() ) echo "<span class='featured_badge'><i class='fa fa-thumb-tack'></i><strong>".__( 'Featured', 'duena' )."</strong></span>"; ?>
 
 		<?php if(!is_singular()) : ?>
 
@@ -32,9 +32,9 @@
 				<?php 
 					$excerpt = get_the_excerpt();
 					if (has_excerpt()) {
-							the_excerpt();
+						the_excerpt();
 					} else {
-							echo duena_string_limit_words($excerpt,55);
+						echo apply_filters( 'the_excerpt', duena_string_limit_words($excerpt,55) );
 					}
 				?>
 				</div>
@@ -62,7 +62,7 @@
 		<!-- /Gallery Post -->
 		<?php if( has_tag() ) { ?>
 			<footer class="post-footer">
-				<i class="icon-tags"></i> <?php the_tags('Tags: ', ' ', ''); ?>
+				<i class="fa fa-tags"></i> <?php the_tags(__( 'Tags: ', 'duena' ), ' ', ''); ?>
 			</footer>
 		<?php } ?>
 		<?php endif; ?>
